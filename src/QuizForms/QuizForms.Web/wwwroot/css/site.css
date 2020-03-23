@@ -1,0 +1,288 @@
+﻿/* REST */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* SHARED */
+
+body, html {    
+    float:left;
+    width: 100%;
+    height: 100%;
+    background: #0f0e17;
+    color: #a7a9be;
+    font-family: 'Roboto', sans-serif;
+}
+
+.row {
+    float: left;
+    width: 100%;
+}
+
+a {
+    color: #a7a9be;
+    text-decoration:none;
+}
+
+header {
+    width: 100%;
+    height: 46px;
+    float: left;
+    background: #0f0e17;
+    border-bottom: solid 2px #2c2b38;    
+}
+
+header img {
+    margin: 0 auto;
+    height: 46px;
+    display: block;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.stream-header {
+    float: left;
+    width: 100%;
+    background: #18181B;
+    height: 28px;
+    text-align: center;
+    line-height: 28px;
+    font-size: 12px;
+    border-bottom: solid 2px #2c2b38;
+}
+
+.twitch-embed-container {
+    float: left;
+    width: 100%;
+    height: calc(100% - 78px);
+}
+
+.container {
+    margin: 0 auto;
+    width: 900px;
+    max-width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin-top: 32px;
+    color: #fffffe;
+    font-size: 28px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    float: left;
+    width: 100%;
+}
+
+h2 {
+    font-size: 22px;
+    color: #fffffe;
+    margin-top: 32px;
+    float: left;
+    width: 100%;
+}
+
+p {
+    line-height: 28px;
+    font-size: 16px;    
+}
+
+ul {
+    margin-top: 16px;
+    margin-bottom: 32px;
+    float: left;
+    width: 100%;
+}
+
+ul li {    
+    float:left;
+    width:100%;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #fffffe;
+    padding: 8px;
+    box-sizing: border-box;
+    float: left;
+}
+
+ul li a:before {
+    content: ' ';
+    float: left;
+    width: 12px;
+    height: 12px;
+    background: #ff8906;
+    margin: 1px;
+    border-radius: 50%;
+    margin-right: 12px;
+    margin-bottom: 8px;
+}
+
+ul li a:hover:before {
+    background: #fff;
+}
+
+ul li a span {
+    margin-left: 2px;
+    color: #ff8906;    
+    transition: margin-left 0.2s;
+}
+
+
+ul li a:hover span {
+    margin-left: 10px;
+}
+
+/* FORMS */
+
+form {
+    float: left;
+    width: 100%;
+    margin-bottom: 128px;
+}
+
+form .submit {
+    float: left;
+    background: #ff8906;
+    color: #fffffe;
+    padding: 16px 24px;
+    box-sizing: border-box;
+    margin-top: 32px;
+    font-weight: 600;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+form .submit:hover {
+    background: #d8770b;
+}
+
+form .question {
+    float: left;
+    width: 100%;
+    border: solid 3px #000;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 8px 16px;
+    margin-top: 16px;
+    background: #101017;
+}
+
+form .question h4 {
+    float: left;
+    width: 100%;
+    margin: 8px 0;
+}
+
+form input[type="radio"] {
+    float: left;
+}
+
+form .question-multiple-choice .option {
+    float: left;
+    width: 100%;
+    margin: 12px 0;
+    cursor:pointer;   
+}
+
+form .question-multiple-choice .option .box {
+    float: left;
+    width: 16px;
+    height: 16px;
+    border: solid 2px #ccc;
+    border-radius: 50%;
+    position: relative;
+}
+
+form .question-multiple-choice .option.selected .box {
+    border-color: #ff8906;
+}
+
+form .question-multiple-choice .option.selected .box:after {
+    content: ' ';
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    border-radius: 50%;
+}
+
+form .question-multiple-choice .option .label {
+    float: left;
+    margin-left: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+}
+
+form .question-multiple-choice .option:hover {
+    color: #fff;
+    border-color: #fff;
+}
+
+form .question-text input {
+    float: left;
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+    background: none;
+    border: 0;
+    border-bottom: solid 1px #656565;
+    padding: 12px 8px;
+    color: #fff;
+    outline: 0;
+}
+
+form .question-text input:focus {
+    border-color: #ff8906;
+}

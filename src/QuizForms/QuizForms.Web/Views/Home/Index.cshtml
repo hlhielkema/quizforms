@@ -1,0 +1,28 @@
+﻿@model HomeViewModel
+@{
+    ViewData["Title"] = "Welcome";
+}
+
+<h1>Corona Quiz</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<h2>Antwoordformulieren</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+<ul>
+    @foreach (FormInfo form in Model.AvailableForms)
+    {
+    <li>        
+        <a href="/forms/@form.Id">@form.Title <span>🠆</span></a>
+    </li>
+    }
+</ul>
+
+<h2>Links</h2>
+<ul>
+    <li>
+        <a href="/twitch" target="_blank">Live stream <span>🠆</span></a>        
+    </li>
+    <li>        
+        <a href="#">Contact <span>🠆</span></a>
+    </li>
+</ul>

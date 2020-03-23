@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewData["Title"] = "Twitch";
+    ViewData["RemoveContainer"] = true;
+
+}
+
+<div class="stream-header">
+    Twitch live stream
+</div>
+<div id="twitch-embed" class="twitch-embed-container"></div>
+
+@section Scripts
+{
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+    <script src="~/js/twitch.js"></script>
+}

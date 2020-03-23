@@ -1,0 +1,58 @@
+﻿@model Form
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+<h1>@Model.Title</h1>
+
+@if (!string.IsNullOrWhiteSpace(Model.Description))
+{
+    <p>@Model.Description</p>
+}
+
+<h2>Vragen</h2>
+
+@{ 
+    // Render text questions
+    Func<TextQuestion, IHtmlContent> renderTextQuestion = @<input name="@item.Id" type="text" placeholder="@item.Placeholder">;
+
+    // Render multiple-choice questions
+    Func<MultipleChoiceQuestion, IHtmlContent> renderMultipleChoiceQuestion = @<div name="@item.Id">
+        
+        @* Update from JS *@
+        <input type="hidden" value="" />
+
+        @foreach (string option in item.Options)
+        {             
+            <div class="option" data-value="@option">
+                <div class="box"></div>
+                <div class="label">Option: @option</div>
+            </div>
+        }
+    </div>;
+}
+
+<form id="main">
+    @foreach (Question question in Model.Questions)
+    {
+        <div class="question question-@question.Type">
+            <h4>@question.Title</h4>
+
+            @if (question is MultipleChoiceQuestion mcQuestion)
+            {
+                @renderMultipleChoiceQuestion(mcQuestion);
+            }
+            else if (question is TextQuestion textQuestion)
+            {
+                @renderTextQuestion(textQuestion);
+            }
+
+        </div>
+    }
+    <div class="submit">Antwoorden versturen</div>
+</form>
+
+@section Scripts
+{
+    <script src="~/js/forms.js"></script>
+}

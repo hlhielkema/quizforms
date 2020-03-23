@@ -1,0 +1,48 @@
+{
+    "id": "ronde_5",
+    "title": "Ronde 2: Test",
+    "description": "Test je algemene kennis met deze 10 vragen",
+    "available": false,
+    "questions": [
+        {
+            "title": "Antwoord vraag 1",
+            "type": "multiple-choice",
+            "options": [ "A", "B", "C", "D" ],
+            "correct": "A",
+            "points": 2
+        },
+        {
+            "title": "Antwoord vraag 2",
+            "type": "multiple-choice",
+            "options": [ "A", "B", "C", "D" ],
+            "correct": "C",
+            "points": 2
+        },
+        {
+            "title": "Antwoord vraag 3",
+            "type": "multiple-choice",
+            "options": [ "A", "B", "C", "D" ],
+            "correct": "A",
+            "points": 2
+        },
+        {
+            "title": "Antwoord vraag 4",
+            "type": "multiple-choice",
+            "options": [ "A", "B", "C" ],
+            "correct": "B",
+            "points": 2
+        },
+        {
+            "title": "Antwoord vraag 5",
+            "type": "multiple-choice",
+            "options": [ "A", "B", "C", "D" ],
+            "correct": "B",
+            "points": 2
+        },
+        {
+            "title": "Antwoord vraag 6",
+            "type": "text",            
+            "points": 2
+        }
+    ]
+}
