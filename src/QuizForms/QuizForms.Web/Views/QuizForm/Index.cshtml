@@ -20,7 +20,7 @@
     Func<MultipleChoiceQuestion, IHtmlContent> renderMultipleChoiceQuestion = @<div name="@item.Id">
         
         @* Update from JS *@
-        <input type="hidden" value="" />
+        <input name="@item.Id" type="hidden" value="" />
 
         @foreach (string option in item.Options)
         {             
