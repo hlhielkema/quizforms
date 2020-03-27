@@ -252,8 +252,8 @@ form .question-multiple-choice .option.selected .box:after {
     width: 8px;
     background: #fff;
     position: absolute;
-    top: 2px;
-    left: 2px;
+    top: 4px;
+    left: 4px;
     border-radius: 50%;
 }
 
