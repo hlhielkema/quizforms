@@ -16,11 +16,14 @@ namespace QuizForms.Data.Repositories
 
         public string ContactPath { get; private set; }
 
+        public string AuthorizationPath { get; private set; }
+
         // Constants
         private const string DIRECTORY_FORMS = "forms";
         private const string DIRECTORY_ANSWERS = "answers";
         private const string DIRECTORY_SCORES = "scores";
         private const string DIRECTORY_CONTACT = "contact";
+        private const string DIRECTORY_AUTHORIZATION = "authorization";
 
         /// <summary>
         /// Constuctor
@@ -39,7 +42,8 @@ namespace QuizForms.Data.Repositories
             FormsPath = Path.Combine(DataPath, DIRECTORY_FORMS);
             AnswersPath = Path.Combine(DataPath, DIRECTORY_ANSWERS);
             ScoresPath = Path.Combine(DataPath, DIRECTORY_SCORES);
-            ContactPath= Path.Combine(DataPath, DIRECTORY_CONTACT);
+            ContactPath = Path.Combine(DataPath, DIRECTORY_CONTACT);
+            AuthorizationPath = Path.Combine(DataPath, DIRECTORY_AUTHORIZATION);
 
             // Create the chil directories that do not exist
             if (!Directory.Exists(FormsPath))
@@ -50,6 +54,8 @@ namespace QuizForms.Data.Repositories
                 Directory.CreateDirectory(ScoresPath);
             if (!Directory.Exists(ContactPath))
                 Directory.CreateDirectory(ContactPath);
+            if (!Directory.Exists(AuthorizationPath))
+                Directory.CreateDirectory(AuthorizationPath);
         }
     }
 }
