@@ -1,3 +1,1 @@
-# quizforms
-
 ![banner](banner.svg)
