@@ -40,7 +40,7 @@ namespace QuizForms.Web
             //
             services.AddAntiforgery(options =>
             {
-                // Set Cookie properties using CookieBuilder properties†.
+                // Set Cookie properties using CookieBuilder propertiesï¿½.
                 options.FormFieldName = "AntiforgeryToken";
                 options.HeaderName = "X-CSRF-TOKEN";
                 options.SuppressXFrameOptionsHeader = false;
@@ -55,10 +55,8 @@ namespace QuizForms.Web
                 app.UseDeveloperExceptionPage();
             }
             else
-            {
-                // tmp
-                app.UseDeveloperExceptionPage();
-                //app.UseExceptionHandler("/Home/Error");
+            {                
+                app.UseExceptionHandler("/Home/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 //app.UseHsts();
             }
