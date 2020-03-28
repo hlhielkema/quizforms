@@ -5,6 +5,6 @@ namespace QuizForms.Web.Models
 {
     public class HomeViewModel
     {
-        public List<FormInfo> AvailableForms { get; set; }
+        public List<FormInfo> VisibleForms { get; set; }
     }
 }

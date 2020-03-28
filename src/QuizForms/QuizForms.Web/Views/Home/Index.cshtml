@@ -9,10 +9,17 @@
 <h2>Antwoordformulieren</h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
 <ul>
-    @foreach (FormInfo form in Model.AvailableForms)
+    @foreach (FormInfo form in Model.VisibleForms)
     {
-    <li>        
-        <a href="/forms/@form.Id">@form.Title <span>🠆</span></a>
+    <li>
+        @if (form.Available)
+        {
+            <a href="/forms/@form.Id">@form.Title <span>🠆</span></a>
+        }
+        else
+        {
+            <div class="locked-form">@form.Title <span>🔒</span></div>         
+        }
     </li>
     }
 </ul>

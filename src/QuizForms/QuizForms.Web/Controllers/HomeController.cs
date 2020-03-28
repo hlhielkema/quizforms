@@ -21,7 +21,7 @@ namespace QuizForms.Web.Controllers
         {                                    
             return View(new HomeViewModel()
             {
-                AvailableForms = _formsRepository.GetAllVisible()
+                VisibleForms = _formsRepository.GetAllVisible()
             });
         }       
 

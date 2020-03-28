@@ -1,8 +1,15 @@
 ﻿// TODO
-// - Button loading indicator
-// - Send to back-end
 // - OK notification design.
-// - Notification when leaving the page
+
+// Show a warning when the user tries to leave the page before submitting the answers
+var showWarningWhenLeavingPage = true;
+window.addEventListener("beforeunload", function (e) {
+    if (showWarningWhenLeavingPage) {
+        var confirmationMessage = 'Weet je zeker dat je de pagina wil verlaten? De antwoorden zijn nog niet verzonden.';
+        (e || window.event).returnValue = confirmationMessage; //Gecko + IE
+        return confirmationMessage; //Gecko + Webkit, Safari, Chrome etc.
+    }
+});
 
 // Multiple-choice control
 (function () {
@@ -37,6 +44,7 @@
     }
 })();
 
+// Form submit logic
 (function () {
     // Get the submit button element     
     var submitElement = document.querySelector('form .submit');
@@ -57,10 +65,15 @@
         // Collect the input values from the form elements
         var results = [];
         var empty = 0;
+        var teamnameSet = false;
         for (var i = 0; i < questionElements.length; i++) {
             // Get the input name and value
             var name = questionElements[i].name;
             var value = questionElements[i].value;
+
+            if (name === 'Teamname' && value.length > 0) {
+                teamnameSet = true;
+            }
 
             results.push({
                 Key: name,
@@ -73,12 +86,17 @@
             }
         }
 
+        if (!teamnameSet) {
+            alert('Vul een teamnaam in om de antwoorden te kunnen verzenden.');
+            return;
+        }
+
         // Ask for confirmation if some answers are still empty
         var confirmed = empty === 0 || confirm(empty + ' antwoorden zijn nog leeg. Weet je zeker dat je de antwoorden wil versturen?');
         if (confirmed) {
             submitElement.classList.add('working');
             submitElement.innerText = 'Bezig met versturen...';
-
+            
             console.log('form data', results);
 
             var model = {                
@@ -94,7 +112,8 @@
                 if (xhr.readyState === 4) {
 
                     // Reset submit button state
-                    submitElement.classList.remove('working');                    
+                    submitElement.classList.remove('working');      
+                    submitElement.innerText = 'Antwoorden versturen';
 
                     if (xhr.status === 200) {
                         // OK                        
@@ -104,6 +123,9 @@
                         // Notify the user
                         alert('De antwoorden zijn verzonden!');
 
+                        // Disable warning when leaving the page
+                        showWarningWhenLeavingPage = false;
+
                         // Redirect to the homepage
                         document.location = '/';
                     }
@@ -112,6 +134,9 @@
                     }
                     else if (xhr.status === 500) {
                         alert('Server error: ' + xhr.responseText);
+                    }
+                    else {
+                        alert('Error: ' + xhr.responseText);
                     }
                 }
             };
