@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using QuizForms.Data;
+using QuizForms.Data.Repositories;
 
 namespace QuizForms.Web
 {
@@ -23,6 +25,11 @@ namespace QuizForms.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton<IQuizFormsRepository, QuizFormsRepository>();
+            services.AddSingleton<IQuizFormAnswersRepository, QuizFormAnswersRepository>();
+
+            services.Configure<QuizFormsSettings>(Configuration.GetSection("Settings"));
+
             services.AddControllersWithViews();
         }
 

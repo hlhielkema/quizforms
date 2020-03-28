@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.Extensions.Options;
+using Newtonsoft.Json;
 using QuizForms.Data.Models.Forms;
 using QuizForms.Data.Models.Questions;
 using System;
@@ -6,14 +7,32 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace QuizForms.Data.Managers
+
+namespace QuizForms.Data.Repositories
 {
-    public static class QuizFormManager
-    {       
-        public static List<FormInfo> GetFormsFromDirectory(string directoryPath)
+    public sealed class QuizFormsRepository : QuizFormsBaseRepository, IQuizFormsRepository
+    {
+        public QuizFormsRepository(IOptions<QuizFormsSettings> settings) 
+            : base(settings)
+        { }
+
+        public List<FormInfo> GetAllVisible()
         {
             List<FormInfo> results = new List<FormInfo>();
-            foreach (string filename in Directory.GetFiles(directoryPath))
+            foreach (string filename in Directory.GetFiles(FormsPath))
+            {
+                string contents = File.ReadAllText(filename);
+                FormInfo form = JsonConvert.DeserializeObject<FormInfo>(contents);
+                if (!form.Hidden)
+                    results.Add(form);
+            }
+            return results;
+        }
+
+        public List<FormInfo> GetAll()
+        {
+            List<FormInfo> results = new List<FormInfo>();
+            foreach (string filename in Directory.GetFiles(FormsPath))
             {
                 string contents = File.ReadAllText(filename);
                 FormInfo form = JsonConvert.DeserializeObject<FormInfo>(contents);
@@ -22,9 +41,9 @@ namespace QuizForms.Data.Managers
             return results;
         }
 
-        public static Form GetFormByid(string directoryPath, string id)
+        public Form GetById(string id)
         {
-            foreach (string filename in Directory.GetFiles(directoryPath))
+            foreach (string filename in Directory.GetFiles(FormsPath))
             {
                 string contents = File.ReadAllText(filename);
                 Form form = JsonConvert.DeserializeObject<Form>(contents);
@@ -37,19 +56,7 @@ namespace QuizForms.Data.Managers
             return null;
         }
 
-        public static Form ReadFormFromFile(string filename)
-        {
-            if (File.Exists(filename))
-            {
-                string contents = File.ReadAllText(filename);
-                Form form = JsonConvert.DeserializeObject<Form>(contents);
-                ValidateAndCorrectForm(form);
-                return form;
-            }
-            return null;
-        }
-
-        private static void ValidateAndCorrectForm(Form form)
+        private void ValidateAndCorrectForm(Form form)
         {
             foreach (Question question in form.Questions)
             {

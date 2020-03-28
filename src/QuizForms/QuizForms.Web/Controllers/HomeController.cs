@@ -1,39 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using QuizForms.Data.Managers;
-using QuizForms.Data.Models.Forms;
+using QuizForms.Data.Repositories;
 using QuizForms.Web.Models;
+using System.Diagnostics;
 
 namespace QuizForms.Web.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IQuizFormsRepository _formsRepository;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IQuizFormsRepository formsRepository)
         {
             _logger = logger;
+            _formsRepository = formsRepository;
         }
 
         public IActionResult Index()
-        {
-            // Temp for testing
-            string dir = @"D:\GitHub Workspace\quizforms\data\forms";
-            List<FormInfo> forms = QuizFormManager.GetFormsFromDirectory(dir);
-
-            //Form firstForm = QuizFormManager.GetFormByid(dir, forms[0].Id);
-
-            HomeViewModel model = new HomeViewModel()
+        {                                    
+            return View(new HomeViewModel()
             {
-                AvailableForms = forms.Where(x => !x.Hidden).ToList()
-            };
-
-            return View(model);
+                AvailableForms = _formsRepository.GetAllVisible()
+            });
         }
 
         [Route("twitch")]
