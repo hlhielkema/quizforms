@@ -7,6 +7,10 @@ namespace QuizForms.Data.Repositories
 {
     public interface IQuizFormsRepository
     {
+        bool ExistsAndAvailable(string id);
+
+        bool Exists(string id);
+
         List<FormInfo> GetAllVisible();
 
         List<FormInfo> GetAll();

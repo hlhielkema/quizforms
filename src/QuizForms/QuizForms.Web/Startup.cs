@@ -37,7 +37,7 @@ namespace QuizForms.Web
             {
                 // Set Cookie properties using CookieBuilder properties†.
                 options.FormFieldName = "AntiforgeryToken";
-                options.HeaderName = "X-CSRF-TOKEN-HEADERNAME";
+                options.HeaderName = "X-CSRF-TOKEN";
                 options.SuppressXFrameOptionsHeader = false;
             });
         }

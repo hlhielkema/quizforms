@@ -32,7 +32,12 @@
     </div>;
 }
 
-<form id="main">
+<form asp-controller="QuizForm" asp-action="Index" method="post" id="main">
+    <div class="question question-text">
+        <h4>Teamnaam</h4>
+        <input name="Teamname" type="text" placeholder="Teamnaam">
+    </div>
+
     @foreach (Question question in Model.Questions)
     {
         <div class="question question-@question.Type">

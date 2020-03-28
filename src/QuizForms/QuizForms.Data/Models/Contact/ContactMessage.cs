@@ -14,7 +14,7 @@ namespace QuizForms.Data.Models.Contact
         [JsonProperty("message")]
         public string Message { get; set; }
 
-        [JsonProperty("date-sent")]
-        public DateTime DateSent { get; set; } // UTC
+        [JsonProperty("date-created")]
+        public DateTime DateCreated { get; set; } // UTC
     }
 }

@@ -70,5 +70,17 @@ namespace QuizForms.Data.Repositories
                 }
             }
         }
+
+        public bool ExistsAndAvailable(string id)
+        {
+            Form form = GetById(id);
+            return form != null && form.Available && !form.Hidden;
+        }
+
+        public bool Exists(string id)
+        {
+            Form form = GetById(id);
+            return form != null;
+        }
     }
 }

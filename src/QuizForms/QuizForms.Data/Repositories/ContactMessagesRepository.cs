@@ -38,30 +38,27 @@ namespace QuizForms.Data.Repositories
         /// <param name="messageText">message text</param>
         /// <returns>unique message id</returns>
         public Guid Create(string emailAddress, string messageText)
-        {
-            // Generate an unqiue id for the contact message
-            Guid messageId = Guid.NewGuid();
-
+        {            
             // Combine the data into a model
             ContactMessage message = new ContactMessage()
             {
-                Id = messageId,
+                Id = Guid.NewGuid(),
                 EmailAddress = emailAddress,
                 Message = messageText,
-                DateSent = DateTime.UtcNow
+                DateCreated = DateTime.UtcNow
             };
 
             // Serialize the data to JSON
             string json = JsonConvert.SerializeObject(message, Formatting.Indented);
 
             // Construct the filename for the new contact message
-            string filename = Path.Combine(ContactPath, string.Format("{0}.json", messageId));
+            string filename = Path.Combine(ContactPath, string.Format("{0}.json", message.Id));
 
             // Write the JSON to the new contact message file
             File.WriteAllText(filename, json);
 
             // Return the unqiue id of the new message
-            return messageId;
+            return message.Id;
         }
 
         /// <summary>

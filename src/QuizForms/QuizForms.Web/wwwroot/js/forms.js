@@ -2,7 +2,7 @@
 // - Button loading indicator
 // - Send to back-end
 // - OK notification design.
-
+// - Notification when leaving the page
 
 // Multiple-choice control
 (function () {
@@ -55,14 +55,17 @@
         var questionElements = form.querySelectorAll('.question input');
 
         // Collect the input values from the form elements
-        var results = {};
+        var results = [];
         var empty = 0;
         for (var i = 0; i < questionElements.length; i++) {
-            // Get the input value
+            // Get the input name and value
+            var name = questionElements[i].name;
             var value = questionElements[i].value;
 
-            // Add the value to the model
-            results[questionElements[i].name] = value;
+            results.push({
+                Key: name,
+                Value: value
+            });
 
             // Count empty answers
             if (value.length === 0) {
@@ -78,21 +81,42 @@
 
             console.log('form data', results);
 
-            // Test
-            setTimeout(function () {
-                submitElement.classList.remove('working');
-                submitElement.classList.add('done');
-                submitElement.innerText = 'Verzonden';
-            }, 3000);
+            var model = {                
+                Answers: results                         
+            };
+           
+            var xhr = new XMLHttpRequest();
+            var url = "";
+            xhr.open("POST", url, true);
+            xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.setRequestHeader("X-CSRF-TOKEN", document.querySelector('form input[name="AntiforgeryToken"]').value);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
 
+                    // Reset submit button state
+                    submitElement.classList.remove('working');                    
 
-            // TODO: Send form data to the backend
+                    if (xhr.status === 200) {
+                        // OK                        
+                        submitElement.classList.add('done');
+                        submitElement.innerText = 'Verzonden';
 
-            // Notify the user
-            //alert('De antwoorden zijn verzonden!');
+                        // Notify the user
+                        alert('De antwoorden zijn verzonden!');
 
-            // Redirect to the homepage
-            //document.location = '/';
+                        // Redirect to the homepage
+                        document.location = '/';
+                    }
+                    else if (xhr.status === 400) {
+                        alert('Bad request: ' + xhr.responseText);
+                    }
+                    else if (xhr.status === 500) {
+                        alert('Server error: ' + xhr.responseText);
+                    }
+                }
+            };
+            var data = JSON.stringify(model);
+            xhr.send(data);
         }        
     });
 }) ();

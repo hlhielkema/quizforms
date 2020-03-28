@@ -31,7 +31,7 @@ namespace QuizForms.Web.Controllers
         public IActionResult Index(ContactFormModel model)
         {
             if (ModelState.IsValid)
-            {                
+            {                  
                 // Create the contact message
                 _messageRepostitory.Create(model.EmailAddress, model.Message);
 
