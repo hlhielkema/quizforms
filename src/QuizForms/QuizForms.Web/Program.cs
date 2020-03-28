@@ -20,7 +20,9 @@ namespace QuizForms.Web
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>();
+                    webBuilder.UseStartup<Startup>().UseKestrel(options => {
+                        options.ListenAnyIP(5000);
+                    });
                 });
     }
 }

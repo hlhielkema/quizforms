@@ -36,7 +36,7 @@ namespace QuizForms.Data.Repositories
 
             // Validate the settings
             if (string.IsNullOrWhiteSpace(DataPath) || !Directory.Exists(DataPath))
-                throw new Exception("Data path from configuration empty or not found.");
+                throw new Exception(string.Format("Data path from configuration empty or not found. Config=\"{0}\". Current=\"{1}\"", DataPath, Environment.CurrentDirectory));
 
             // Create the paths for the child directories
             FormsPath = Path.Combine(DataPath, DIRECTORY_FORMS);
