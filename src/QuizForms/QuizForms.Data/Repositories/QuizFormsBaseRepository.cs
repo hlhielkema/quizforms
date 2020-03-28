@@ -14,11 +14,18 @@ namespace QuizForms.Data.Repositories
 
         public string ScoresPath { get; private set; }
 
+        public string ContactPath { get; private set; }
+
         // Constants
         private const string DIRECTORY_FORMS = "forms";
         private const string DIRECTORY_ANSWERS = "answers";
         private const string DIRECTORY_SCORES = "scores";
+        private const string DIRECTORY_CONTACT = "contact";
 
+        /// <summary>
+        /// Constuctor
+        /// </summary>
+        /// <param name="settings">quiz forms settings</param>
         internal QuizFormsBaseRepository(IOptions<QuizFormsSettings> settings)
         {
             // Set the base path
@@ -32,6 +39,7 @@ namespace QuizForms.Data.Repositories
             FormsPath = Path.Combine(DataPath, DIRECTORY_FORMS);
             AnswersPath = Path.Combine(DataPath, DIRECTORY_ANSWERS);
             ScoresPath = Path.Combine(DataPath, DIRECTORY_SCORES);
+            ContactPath= Path.Combine(DataPath, DIRECTORY_CONTACT);
 
             // Create the chil directories that do not exist
             if (!Directory.Exists(FormsPath))
@@ -40,6 +48,8 @@ namespace QuizForms.Data.Repositories
                 Directory.CreateDirectory(AnswersPath);
             if (!Directory.Exists(ScoresPath))
                 Directory.CreateDirectory(ScoresPath);
+            if (!Directory.Exists(ContactPath))
+                Directory.CreateDirectory(ContactPath);
         }
     }
 }

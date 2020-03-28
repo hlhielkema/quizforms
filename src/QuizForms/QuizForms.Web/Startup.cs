@@ -27,10 +27,19 @@ namespace QuizForms.Web
         {
             services.AddSingleton<IQuizFormsRepository, QuizFormsRepository>();
             services.AddSingleton<IQuizFormAnswersRepository, QuizFormAnswersRepository>();
+            services.AddSingleton<IContactMessagesRepository, ContactMessagesRepository>();
 
             services.Configure<QuizFormsSettings>(Configuration.GetSection("Settings"));
 
             services.AddControllersWithViews();
+
+            services.AddAntiforgery(options =>
+            {
+                // Set Cookie properties using CookieBuilder properties†.
+                options.FormFieldName = "AntiforgeryToken";
+                options.HeaderName = "X-CSRF-TOKEN-HEADERNAME";
+                options.SuppressXFrameOptionsHeader = false;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

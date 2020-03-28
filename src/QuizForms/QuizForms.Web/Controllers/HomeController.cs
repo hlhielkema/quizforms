@@ -23,14 +23,7 @@ namespace QuizForms.Web.Controllers
             {
                 AvailableForms = _formsRepository.GetAllVisible()
             });
-        }
-
-        [Route("twitch")]
-        [HttpGet]
-        public IActionResult Twitch()
-        {            
-            return View();
-        }
+        }       
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
