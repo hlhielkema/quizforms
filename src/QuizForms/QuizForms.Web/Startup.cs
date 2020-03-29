@@ -1,17 +1,14 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using QuizForms.Data;
-using QuizForms.Data.Repositories;
+using QuizForms.Data.Repositories.Abstract;
+using QuizForms.Data.Repositories.Implementations;
+using System;
 
 namespace QuizForms.Web
 {
@@ -75,7 +72,6 @@ namespace QuizForms.Web
 
             app.UseAuthentication();
 
-            //app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();

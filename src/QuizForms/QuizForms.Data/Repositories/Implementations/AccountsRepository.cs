@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using QuizForms.Data.Models.Account;
+using QuizForms.Data.Repositories.Abstract;
 using QuizForms.Data.Utilities;
 using System.Collections.Generic;
 using System.IO;
@@ -10,7 +11,7 @@ using System.Security.Principal;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace QuizForms.Data.Repositories
+namespace QuizForms.Data.Repositories.Implementations
 {
     public sealed class AccountsRepository : QuizFormsBaseRepository, IAccountsRepository
     {

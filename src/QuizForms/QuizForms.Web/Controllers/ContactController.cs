@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using QuizForms.Data.Repositories;
+﻿using Microsoft.AspNetCore.Mvc;
+using QuizForms.Data.Repositories.Abstract;
 using QuizForms.Web.Models;
 
 namespace QuizForms.Web.Controllers

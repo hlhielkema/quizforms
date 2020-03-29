@@ -1,11 +1,12 @@
 ﻿using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using QuizForms.Data.Models.Answers;
+using QuizForms.Data.Repositories.Abstract;
 using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace QuizForms.Data.Repositories
+namespace QuizForms.Data.Repositories.Implementations
 {
     public sealed class QuizFormAnswersRepository : QuizFormsBaseRepository, IQuizFormAnswersRepository
     {

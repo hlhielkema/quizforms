@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace QuizForms.Data.Repositories
+namespace QuizForms.Data.Repositories.Abstract
 {
     /// <summary>
     /// Contact messages repository

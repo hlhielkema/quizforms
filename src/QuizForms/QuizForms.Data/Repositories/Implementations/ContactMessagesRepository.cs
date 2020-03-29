@@ -1,11 +1,12 @@
 ﻿using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using QuizForms.Data.Models.Contact;
+using QuizForms.Data.Repositories.Abstract;
 using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace QuizForms.Data.Repositories
+namespace QuizForms.Data.Repositories.Implementations
 {
     /// <summary>
     /// Contact messages repository

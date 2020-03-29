@@ -2,7 +2,7 @@
 using System;
 using System.IO;
 
-namespace QuizForms.Data.Repositories
+namespace QuizForms.Data.Repositories.Implementations
 {
     public abstract class QuizFormsBaseRepository
     {

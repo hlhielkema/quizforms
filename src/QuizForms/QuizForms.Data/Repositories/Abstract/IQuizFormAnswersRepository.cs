@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
-namespace QuizForms.Data.Repositories
+namespace QuizForms.Data.Repositories.Abstract
 {
     public interface IQuizFormAnswersRepository
     {

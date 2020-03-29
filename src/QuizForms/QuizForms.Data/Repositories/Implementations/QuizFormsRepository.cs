@@ -2,13 +2,12 @@
 using Newtonsoft.Json;
 using QuizForms.Data.Models.Forms;
 using QuizForms.Data.Models.Questions;
-using System;
+using QuizForms.Data.Repositories.Abstract;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
 
 
-namespace QuizForms.Data.Repositories
+namespace QuizForms.Data.Repositories.Implementations
 {
     public sealed class QuizFormsRepository : QuizFormsBaseRepository, IQuizFormsRepository
     {

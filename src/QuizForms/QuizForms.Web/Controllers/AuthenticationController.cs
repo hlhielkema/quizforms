@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Claims;
-using System.Security.Principal;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authentication;
+﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using QuizForms.Data.Models.Account;
-using QuizForms.Data.Repositories;
+using QuizForms.Data.Repositories.Abstract;
 using QuizForms.Web.Models;
+using System.Threading.Tasks;
 
 namespace QuizForms.Web.Controllers
 {

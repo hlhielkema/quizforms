@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using QuizForms.Data.Repositories;
+using QuizForms.Data.Repositories.Abstract;
 using QuizForms.Web.Models;
 using System.Diagnostics;
 

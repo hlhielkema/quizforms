@@ -2,7 +2,7 @@
 using System.Security.Claims;
 using System.Threading.Tasks;
 
-namespace QuizForms.Data.Repositories
+namespace QuizForms.Data.Repositories.Abstract
 {
     public interface IAccountsRepository
     {
