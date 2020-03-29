@@ -29,6 +29,8 @@ namespace QuizForms.Web
             services.AddSingleton<IQuizFormAnswersRepository, QuizFormAnswersRepository>();
             services.AddSingleton<IContactMessagesRepository, ContactMessagesRepository>();
             services.AddSingleton<IAccountsRepository, AccountsRepository>();
+            services.AddSingleton<IScoreboardRepository, ScoreboardRepository>();
+            services.AddSingleton<ILivestreamRepository, LivestreamRepository>();
 
             //
             services.Configure<QuizFormsSettings>(Configuration.GetSection("Settings"));
