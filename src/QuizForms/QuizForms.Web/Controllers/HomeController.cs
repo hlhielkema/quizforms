@@ -17,13 +17,22 @@ namespace QuizForms.Web.Controllers
             _formsRepository = formsRepository;
         }
 
+        [Route("/")]
+        [HttpGet]
         public IActionResult Index()
         {                                    
             return View(new HomeViewModel()
             {
                 VisibleForms = _formsRepository.GetAllVisible()
             });
-        }       
+        }
+
+        [Route("/about")]
+        [HttpGet]
+        public IActionResult About()
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

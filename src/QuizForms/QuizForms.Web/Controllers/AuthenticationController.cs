@@ -47,7 +47,7 @@ namespace QuizForms.Web.Controllers
 
                     // Redirect to the default page or redirect URL
                     if (string.IsNullOrWhiteSpace(model.Redirect))
-                        return RedirectToAction("Index", "Account");
+                        return RedirectToAction("Index", "Admin");
                     else
                         return LocalRedirect(model.Redirect);
                 }
