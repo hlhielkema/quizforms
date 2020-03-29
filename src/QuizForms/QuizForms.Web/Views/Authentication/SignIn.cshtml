@@ -1,0 +1,22 @@
+﻿@model SignInModel
+@{
+    ViewData["Title"] = "Sign-in";
+}
+
+<h1>Inloggen voor beheerders</h1>
+
+<form asp-controller="Authentication" asp-action="SignIn" method="post">
+    <label for="EmailAddress">Gebruikersnaam</label>
+    <input asp-for="Username" />
+    <span asp-validation-for="Username"></span>
+
+
+    <label for="Message">Wachtwoord</label>
+    <input asp-for="Password" />
+    <span asp-validation-for="Password"></span>
+    <br><br>
+
+    <input asp-for="Redirect" />    
+    
+    <input type="submit" value="Inloggen" formmethod="post">
+</form>

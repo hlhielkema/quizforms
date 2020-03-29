@@ -40,7 +40,7 @@ namespace QuizForms.Web.Controllers
             }
             else
             {
-                // Invalid model state, 
+                // Invalid model state
                 return View(model);
             }
         }

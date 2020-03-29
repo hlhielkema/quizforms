@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace QuizForms.Data.Repositories
@@ -18,5 +17,7 @@ namespace QuizForms.Data.Repositories
         Task<bool> ResetPassword(string username, string password);
 
         Task<bool> DeleteAccount(string username);
+
+        ClaimsPrincipal CreateClaimPrincipal(string username);
     }
 }

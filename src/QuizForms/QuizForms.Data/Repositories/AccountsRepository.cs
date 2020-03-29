@@ -5,6 +5,8 @@ using QuizForms.Data.Utilities;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Security.Claims;
+using System.Security.Principal;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -218,6 +220,7 @@ namespace QuizForms.Data.Repositories
             }
         }
 
+        
         private List<AccountData> ReadFromDisk()
         {
             string filename = Path.Combine(AuthorizationPath, ACCOUNTS_FILENAME);
@@ -243,6 +246,12 @@ namespace QuizForms.Data.Repositories
                 string json = JsonConvert.SerializeObject(accounts);
                 File.WriteAllText(filename, json);
             }
+        }
+
+        public ClaimsPrincipal CreateClaimPrincipal(string username)
+        {
+            IIdentity identity = new QuizFormsIdentity(username);
+            return new ClaimsPrincipal(identity);
         }
     }
 }

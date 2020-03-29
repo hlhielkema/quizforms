@@ -2,8 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -45,6 +47,16 @@ namespace QuizForms.Web
                 options.HeaderName = "X-CSRF-TOKEN";
                 options.SuppressXFrameOptionsHeader = false;
             });
+
+            //
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+              .AddCookie(o => {
+                  o.LoginPath = new PathString("/sign-in");
+                  o.LogoutPath = new PathString("/sign-out");
+                  o.ExpireTimeSpan = new TimeSpan(90, 0, 0, 0);
+                  o.ReturnUrlParameter = "redirect";
+                  o.SlidingExpiration = true;
+              });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -60,6 +72,8 @@ namespace QuizForms.Web
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 //app.UseHsts();
             }
+
+            app.UseAuthentication();
 
             //app.UseHttpsRedirection();
             app.UseStaticFiles();
