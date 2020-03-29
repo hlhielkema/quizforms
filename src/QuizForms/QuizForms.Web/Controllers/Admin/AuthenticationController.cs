@@ -5,7 +5,7 @@ using QuizForms.Data.Repositories.Abstract;
 using QuizForms.Web.Models;
 using System.Threading.Tasks;
 
-namespace QuizForms.Web.Controllers
+namespace QuizForms.Web.Controllers.Admin
 {    
     [Route("admin")]
     public class AuthenticationController : Controller

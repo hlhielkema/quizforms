@@ -2,16 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace QuizForms.Web.Controllers
+namespace QuizForms.Web.Controllers.Admin
 {
-    [Route("livestream")]
-    public class LiveStreamController : Controller
+    [Authorize]
+    [Route("admin")]    
+    public class AdminController : Controller
     {
-        [Route("twitch")]
         [HttpGet]
-        public IActionResult Twitch()
+        public IActionResult Index()
         {
             return View();
         }

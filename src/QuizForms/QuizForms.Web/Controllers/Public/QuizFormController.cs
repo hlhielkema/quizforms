@@ -6,18 +6,16 @@ using QuizForms.Data.Repositories.Abstract;
 using QuizForms.Web.Models;
 using System.Collections.Generic;
 
-namespace QuizForms.Web.Controllers
+namespace QuizForms.Web.Controllers.Public
 {    
     [Route("forms")]
     public class QuizFormController : Controller
-    {
-        private readonly ILogger<HomeController> _logger;
+    {      
         private readonly IQuizFormsRepository _formsRepository;
         private readonly IQuizFormAnswersRepository _answersRepository;
 
-        public QuizFormController(ILogger<HomeController> logger, IQuizFormsRepository formsRepository, IQuizFormAnswersRepository answersRepository)
+        public QuizFormController(IQuizFormsRepository formsRepository, IQuizFormAnswersRepository answersRepository)
         {
-            _logger = logger;
             _formsRepository = formsRepository;
             _answersRepository = answersRepository;
         }

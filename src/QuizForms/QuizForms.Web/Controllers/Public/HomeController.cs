@@ -4,16 +4,14 @@ using QuizForms.Data.Repositories.Abstract;
 using QuizForms.Web.Models;
 using System.Diagnostics;
 
-namespace QuizForms.Web.Controllers
+namespace QuizForms.Web.Controllers.Public
 {
     public class HomeController : Controller
-    {
-        private readonly ILogger<HomeController> _logger;
+    {        
         private readonly IQuizFormsRepository _formsRepository;
 
-        public HomeController(ILogger<HomeController> logger, IQuizFormsRepository formsRepository)
+        public HomeController(IQuizFormsRepository formsRepository)
         {
-            _logger = logger;
             _formsRepository = formsRepository;
         }
 

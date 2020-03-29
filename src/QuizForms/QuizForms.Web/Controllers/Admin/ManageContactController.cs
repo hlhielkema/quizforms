@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace QuizForms.Web.Controllers
-{    
-    [Route("admin")]
+namespace QuizForms.Web.Controllers.Admin
+{
     [Authorize]
-    public class AdminController : Controller
+    [Route("admin/contact")]
+    public class ManageContactController : Controller
     {
         [HttpGet]
         public IActionResult Index()

@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace QuizForms.Web.Controllers
+namespace QuizForms.Web.Controllers.Admin
 {
     [Authorize]
-    [Route("admin/scoreboard")]    
-    public class ScoreboardController : Controller
+    [Route("admin/livestream")]
+    public class ManageLiveStreamController : Controller
     {
         [HttpGet]
         public IActionResult Index()

@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using QuizForms.Web.Models;
 
-namespace QuizForms.Web.Controllers
+namespace QuizForms.Web.Controllers.Admin
 {
     [Authorize]
     [Route("admin/accounts")]

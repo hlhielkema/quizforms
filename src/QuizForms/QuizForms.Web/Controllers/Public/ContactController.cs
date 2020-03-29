@@ -2,7 +2,7 @@
 using QuizForms.Data.Repositories.Abstract;
 using QuizForms.Web.Models;
 
-namespace QuizForms.Web.Controllers
+namespace QuizForms.Web.Controllers.Public
 {
     [Route("contact")]
     public class ContactController : Controller
