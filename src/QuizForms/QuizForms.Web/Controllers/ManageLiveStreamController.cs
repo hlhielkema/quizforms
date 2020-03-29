@@ -6,10 +6,10 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace QuizForms.Web.Controllers
-{    
-    [Route("admin")]
+{
     [Authorize]
-    public class AdminController : Controller
+    [Route("admin/livestream")]
+    public class ManageLiveStreamController : Controller
     {
         [HttpGet]
         public IActionResult Index()

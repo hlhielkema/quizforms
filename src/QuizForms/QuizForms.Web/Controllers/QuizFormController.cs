@@ -7,7 +7,7 @@ using QuizForms.Web.Models;
 using System.Collections.Generic;
 
 namespace QuizForms.Web.Controllers
-{
+{    
     [Route("forms")]
     public class QuizFormController : Controller
     {

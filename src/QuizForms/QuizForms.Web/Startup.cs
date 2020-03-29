@@ -48,8 +48,8 @@ namespace QuizForms.Web
             //
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
               .AddCookie(o => {
-                  o.LoginPath = new PathString("/sign-in");
-                  o.LogoutPath = new PathString("/sign-out");
+                  o.LoginPath = new PathString("/admin/sign-in");
+                  o.LogoutPath = new PathString("/admin/sign-out");
                   o.ExpireTimeSpan = new TimeSpan(90, 0, 0, 0);
                   o.ReturnUrlParameter = "redirect";
                   o.SlidingExpiration = true;

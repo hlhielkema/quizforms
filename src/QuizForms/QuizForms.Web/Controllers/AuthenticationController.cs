@@ -6,7 +6,8 @@ using QuizForms.Web.Models;
 using System.Threading.Tasks;
 
 namespace QuizForms.Web.Controllers
-{
+{    
+    [Route("admin")]
     public class AuthenticationController : Controller
     {
         private readonly IAccountsRepository _accountRepository;

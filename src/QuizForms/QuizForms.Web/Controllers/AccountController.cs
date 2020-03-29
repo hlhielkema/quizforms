@@ -7,9 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 using QuizForms.Web.Models;
 
 namespace QuizForms.Web.Controllers
-{   
-    [Route("account")]
+{
     [Authorize]
+    [Route("admin/accounts")]
     public class AccountController : Controller
     {
         [HttpGet]
