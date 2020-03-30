@@ -8,6 +8,10 @@ namespace QuizForms.Data.Repositories.Implementations
 {
     public sealed class ScoreboardRepository : QuizFormsBaseRepository, IScoreboardRepository
     {
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="settings">quiz forms settings</param>
         public ScoreboardRepository(IOptions<QuizFormsSettings> settings) 
             : base(settings)
         { }

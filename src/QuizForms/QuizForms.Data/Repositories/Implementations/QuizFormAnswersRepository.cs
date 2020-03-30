@@ -10,6 +10,10 @@ namespace QuizForms.Data.Repositories.Implementations
 {
     public sealed class QuizFormAnswersRepository : QuizFormsBaseRepository, IQuizFormAnswersRepository
     {
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="settings">quiz forms settings</param>
         public QuizFormAnswersRepository(IOptions<QuizFormsSettings> settings) 
             : base(settings)
         { }

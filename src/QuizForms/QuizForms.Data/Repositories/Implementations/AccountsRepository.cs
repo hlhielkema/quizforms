@@ -23,6 +23,10 @@ namespace QuizForms.Data.Repositories.Implementations
         // Private fields
         private SemaphoreSlim _semaphore;
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="settings">quiz forms settings</param>
         public AccountsRepository(IOptions<QuizFormsSettings> settings)
             : base(settings)
         {

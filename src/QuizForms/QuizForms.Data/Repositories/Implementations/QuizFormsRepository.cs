@@ -9,8 +9,15 @@ using System.IO;
 
 namespace QuizForms.Data.Repositories.Implementations
 {
+    /// <summary>
+    ///  Quiz forms repository
+    /// </summary>
     public sealed class QuizFormsRepository : QuizFormsBaseRepository, IQuizFormsRepository
     {
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="settings">quiz forms settings</param>
         public QuizFormsRepository(IOptions<QuizFormsSettings> settings) 
             : base(settings)
         { }
