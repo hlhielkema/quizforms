@@ -13,6 +13,9 @@ using System.Threading.Tasks;
 
 namespace QuizForms.Data.Repositories.Implementations
 {
+    /// <summary>
+    /// Accounts repository
+    /// </summary>
     public sealed class AccountsRepository : QuizFormsBaseRepository, IAccountsRepository
     {
         // Constants
@@ -30,9 +33,14 @@ namespace QuizForms.Data.Repositories.Implementations
         public AccountsRepository(IOptions<QuizFormsSettings> settings)
             : base(settings)
         {
+            // Create the samaphore to manage the access to the read and write operations.
             _semaphore = new SemaphoreSlim(1, 1);
-        }                  
+        }
 
+        /// <summary>
+        /// Get all accounts.
+        /// </summary>
+        /// <returns>list with username</returns>
         public async Task<List<string>> GetAccounts()
         {
             // Asynchronously wait to enter the semaphore
@@ -53,6 +61,14 @@ namespace QuizForms.Data.Repositories.Implementations
             }
         }
 
+        /// <summary>
+        /// Get if an account exists
+        /// </summary>
+        /// <param name="username"></param>
+        /// <returns>
+        ///     true = account exists;
+        ///     false = account does not exist
+        /// </returns>
         public async Task<bool> Exists(string username)
         {
             // Asynchronously wait to enter the semaphore
@@ -73,6 +89,15 @@ namespace QuizForms.Data.Repositories.Implementations
             }
         }
 
+        /// <summary>
+        /// Create an new account
+        /// </summary>
+        /// <param name="username">account username</param>
+        /// <param name="password">account password</param>
+        /// <returns>
+        ///     true = account created;
+        ///     false = an account with the same username already exists
+        /// </returns>
         public async Task<bool> CreateAccount(string username, string password)
         {
             // Asynchronously wait to enter the semaphore
@@ -107,6 +132,15 @@ namespace QuizForms.Data.Repositories.Implementations
             }
         }
 
+        /// <summary>
+        /// Validate account credentials
+        /// </summary>
+        /// <param name="username">account username</param>
+        /// <param name="password">account password</param>
+        /// <returns>
+        ///     true = credentials are valid;
+        ///     false = the username or password is incorrect
+        /// </returns>
         public async Task<bool> ValidateCredentials(string username, string password)
         {
             // Asynchronously wait to enter the semaphore
@@ -157,6 +191,15 @@ namespace QuizForms.Data.Repositories.Implementations
             }            
         }
 
+        /// <summary>
+        /// Reset the password for an account
+        /// </summary>
+        /// <param name="username">account username</param>
+        /// <param name="password">new account password</param>
+        /// <returns>
+        ///     true = the account was found and the password has been updated;
+        ///     false = account not found
+        /// </returns>
         public async Task<bool> ResetPassword(string username, string password)
         {
             // Asynchronously wait to enter the semaphore
@@ -193,6 +236,14 @@ namespace QuizForms.Data.Repositories.Implementations
             }
         }
 
+        /// <summary>
+        /// Delete an account
+        /// </summary>
+        /// <param name="username">account username</param>
+        /// <returns>
+        ///     true = the account was found and deleted;
+        ///     false = account not found
+        /// </returns
         public async Task<bool> DeleteAccount(string username)
         {
             // Asynchronously wait to enter the semaphore
@@ -223,9 +274,23 @@ namespace QuizForms.Data.Repositories.Implementations
                 // Release the semaphore
                 _semaphore.Release();
             }
+        }      
+
+        /// <summary>
+        /// Create a claim princiapl for an account
+        /// </summary>
+        /// <param name="username">account username</param>
+        /// <returns>claim principal</returns>
+        public ClaimsPrincipal CreateClaimPrincipal(string username)
+        {
+            IIdentity identity = new QuizFormsIdentity(username);
+            return new ClaimsPrincipal(identity);
         }
 
-        
+        /// <summary>
+        /// Read the account list from the disk.
+        /// </summary>
+        /// <returns>lists with accounts</returns>
         private List<AccountData> ReadFromDisk()
         {
             string filename = Path.Combine(AuthorizationPath, ACCOUNTS_FILENAME);
@@ -238,6 +303,10 @@ namespace QuizForms.Data.Repositories.Implementations
             return null;
         }
 
+        /// <summary>
+        /// Write the account list to the disk
+        /// </summary>
+        /// <param name="accounts">lists with accounts</param>
         private void WriteToDisk(List<AccountData> accounts)
         {
             string filename = Path.Combine(AuthorizationPath, ACCOUNTS_FILENAME);
@@ -251,12 +320,6 @@ namespace QuizForms.Data.Repositories.Implementations
                 string json = JsonConvert.SerializeObject(accounts);
                 File.WriteAllText(filename, json);
             }
-        }
-
-        public ClaimsPrincipal CreateClaimPrincipal(string username)
-        {
-            IIdentity identity = new QuizFormsIdentity(username);
-            return new ClaimsPrincipal(identity);
         }
     }
 }
