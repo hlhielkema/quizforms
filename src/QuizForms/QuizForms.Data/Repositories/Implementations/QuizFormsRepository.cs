@@ -3,12 +3,16 @@ using Newtonsoft.Json;
 using QuizForms.Data.Models.Forms;
 using QuizForms.Data.Models.Questions;
 using QuizForms.Data.Repositories.Abstract;
+using System;
 using System.Collections.Generic;
 using System.IO;
 
 
 namespace QuizForms.Data.Repositories.Implementations
 {
+    // TODO: Improve this repo
+
+
     /// <summary>
     ///  Quiz forms repository
     /// </summary>
@@ -61,7 +65,7 @@ namespace QuizForms.Data.Repositories.Implementations
             }
             return null;
         }
-
+      
         private void ValidateAndCorrectForm(Form form)
         {
             foreach (Question question in form.Questions)
@@ -87,6 +91,64 @@ namespace QuizForms.Data.Repositories.Implementations
         {
             Form form = GetById(id);
             return form != null;
+        }
+
+        /// <summary>
+        /// Update if a form is available.
+        /// </summary>
+        /// <param name="id">form id</param>
+        /// <param name="available">new available state</param>        
+        public void UpdateAvailable(string id, bool available)
+        {
+            foreach (string filename in Directory.GetFiles(FormsPath))
+            {
+                // Read the form from the file
+                string json = File.ReadAllText(filename);
+                Form form = JsonConvert.DeserializeObject<Form>(json);
+
+                if (form.Id == id)
+                {
+                    // Update the state
+                    form.Available = available;
+
+                    // Write the form to the file
+                    json = JsonConvert.SerializeObject(form);
+                    File.WriteAllText(filename, json);
+
+                    return;
+                }
+            }
+
+            throw new Exception("Form not found");
+        }
+
+        /// <summary>
+        /// Update if a form is hidden.
+        /// </summary>
+        /// <param name="id">form id</param>
+        /// <param name="hidden">new hidden state</param>        
+        public void UpdateHidden(string id, bool hidden)
+        {
+            foreach (string filename in Directory.GetFiles(FormsPath))
+            {
+                // Read the form from the file
+                string json = File.ReadAllText(filename);
+                Form form = JsonConvert.DeserializeObject<Form>(json);
+
+                if (form.Id == id)
+                {
+                    // Update the state
+                    form.Hidden = hidden;
+
+                    // Write the form to the file
+                    json = JsonConvert.SerializeObject(form);
+                    File.WriteAllText(filename, json);
+
+                    return;
+                }
+            }
+
+            throw new Exception("Form not found");
         }
     }
 }

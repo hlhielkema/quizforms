@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using QuizForms.Data.Repositories.Abstract;
+using QuizForms.Web.Models.Admin;
 
 namespace QuizForms.Web.Controllers.Admin
 {
@@ -11,10 +13,49 @@ namespace QuizForms.Web.Controllers.Admin
     [Route("admin/forms")]    
     public class ManageQuizFormsController : Controller
     {
+        private readonly IQuizFormsRepository _formsRepository;
+        
+        public ManageQuizFormsController(IQuizFormsRepository formsRepository)
+        {
+            _formsRepository = formsRepository;            
+        }
+
         [HttpGet]
         public IActionResult Index()
         {
-            return View();
+            ManageQuizFormsViewModel model = new ManageQuizFormsViewModel()
+            {
+                AllForms = _formsRepository.GetAll()
+            };
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [Route("/update")]
+        [ValidateAntiForgeryToken]
+        public IActionResult Update(string action, string id)
+        {
+            if (_formsRepository.Exists(id))
+            {
+                switch(action)
+                {
+                    case "disable":
+                        _formsRepository.UpdateAvailable(id, false);
+                        break;
+                    case "enable":
+                        _formsRepository.UpdateAvailable(id, true);
+                        break;
+                    case "show":
+                        _formsRepository.UpdateHidden(id, false);
+                        break;
+                    case "hide":
+                        _formsRepository.UpdateHidden(id, true);
+                        break;                   
+                }
+            }
+
+            return LocalRedirect("/admin/forms");
         }
     }
 }

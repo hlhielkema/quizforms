@@ -1,0 +1,44 @@
+﻿table {
+    width: 100%;
+    float: left;
+    width: 100%;
+    margin: 16px 0;
+    color: #a7a9be;
+    font-size: 13px;
+
+    tr {
+        border-bottom: solid 1px #a7a9be;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 12px 0;
+    }
+
+    th {
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+
+    .action {
+        color: #a7a9be;
+        padding: 0 4px;
+        background: 0;
+        border: 0;
+        outline: 0;
+        cursor: pointer;
+        font-style: italic;
+    }
+
+    .green {
+        color: green;
+    }
+
+    .red {
+        color: red;
+    }
+
+    div {
+        float: left;
+    }
+}

@@ -1,7 +1,60 @@
-﻿
+﻿@model ManageQuizFormsViewModel
 @{
     ViewData["Title"] = "Formulieren beheren";
 }
 
+@{    
+    Func<ActionButton, IHtmlContent> renderAction = @<form action="/update" method="post" class="submit-action-form hidden">
+        <input type="hidden" name="action" value="@item.Action" />
+        <input type="hidden" name="id" value="@item.Id" />
+        <input type="submit" value="@item.Label" class="action">
+        @Html.AntiForgeryToken()
+    </form>;
+}
+
 <h1>Formulieren beheren</h1>
 
+
+<h2>Antwoordformulieren</h2>
+
+<table>
+    <tr>
+        <th>Titel</th>
+        <th>Beschikbaarheid</th>
+        <th>zithbaarheid</th>
+        <th>Verwijzingen</th>
+    </tr>
+    @foreach (FormInfo form in Model.AllForms)
+    {
+        <tr>
+            <td>@form.Title</td>
+            <td>
+                @if (form.Available)
+                {
+                    <div class="green">Beschikbaar</div>
+                    @renderAction(new ActionButton("disable", form.Id, "(sluiten)"))
+                }
+                else
+                {
+                    <div class="red">Gesloten</div>                    
+                    @renderAction(new ActionButton("enable", form.Id, "(open)"))
+                }
+            </td>
+            <td>
+                @if (form.Hidden)
+                {
+                    <div class="red">Verborgen</div>                    
+                    @renderAction(new ActionButton("show", form.Id, "(tonen)"))
+                }
+                else
+                {
+                    <div class="green">Zichtbaar</div>                    
+                    @renderAction(new ActionButton("hide", form.Id, "(verbergen)"))
+                }
+            </td>
+            <td>
+                <a class="action" href="#">Antwoorden</a>
+            </td>
+        </tr>
+    }
+</table>

@@ -42,5 +42,19 @@ namespace QuizForms.Data.Repositories.Abstract
         /// <param name="id"></param>
         /// <returns>form</returns>
         Form GetById(string id);
+
+        /// <summary>
+        /// Update if a form is available.
+        /// </summary>
+        /// <param name="id">form id</param>
+        /// <param name="available">new available state</param>        
+        void UpdateAvailable(string id, bool available);
+
+        /// <summary>
+        /// Update if a form is hidden.
+        /// </summary>
+        /// <param name="id">form id</param>
+        /// <param name="hidden">new hidden state</param>        
+        void UpdateHidden(string id, bool hidden);
     }
 }
