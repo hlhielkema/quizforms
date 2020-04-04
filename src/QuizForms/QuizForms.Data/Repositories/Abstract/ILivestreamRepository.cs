@@ -65,7 +65,7 @@ namespace QuizForms.Data.Repositories.Abstract
         /// </summary>
         /// <param name="id">livestream id</param>
         /// <returns>
-        ///     true = found and deleted,
+        ///     true = found and deleted;
         ///     false = not found
         /// </returns>
         bool Delete(Guid id);

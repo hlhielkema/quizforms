@@ -25,12 +25,13 @@ namespace QuizForms.Web
         public void ConfigureServices(IServiceCollection services)
         {
             //
-            services.AddSingleton<IQuizFormsRepository, QuizFormsRepository>();
-            services.AddSingleton<IQuizFormAnswersRepository, QuizFormAnswersRepository>();
-            services.AddSingleton<IContactMessagesRepository, ContactMessagesRepository>();
             services.AddSingleton<IAccountsRepository, AccountsRepository>();
-            services.AddSingleton<IScoreboardRepository, ScoreboardRepository>();
+            services.AddSingleton<IContactMessagesRepository, ContactMessagesRepository>();
             services.AddSingleton<ILivestreamRepository, LivestreamRepository>();
+            services.AddSingleton<IQuizFormAnswersRepository, QuizFormAnswersRepository>();
+            services.AddSingleton<IQuizFormsRepository, QuizFormsRepository>();
+            services.AddSingleton<IQuizFormsScoresRepostiory, QuizFormsScoresRepostiory>();
+            services.AddSingleton<IScoreboardRepository, ScoreboardRepository>();                       
 
             //
             services.Configure<QuizFormsSettings>(Configuration.GetSection("Settings"));
