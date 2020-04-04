@@ -1,36 +1,36 @@
-![banner](banner.svg)
+![banner](img/banner.svg)
 
-# Introduction
-
-TODO
-
-# Setup
+## Introduction
 
 TODO
 
-# Docker
+## Setup
 
-## Build and run container
+TODO
+
+## Docker
+
+### Build and run container
 ```
 .\build.ps1; .\run.ps1
 ```
 
-## Build container
+### Build container
 ```
 .\build.ps1;
 ```
 
-## Run container
+### Run container
 ```
 .\run.ps1
 ```
 
-## List active containers
+### List active containers
 ```
 docker ps
 ```
 
-## Stop container
+### Stop container
 ```
 docker stop quizformsapp
 ```
