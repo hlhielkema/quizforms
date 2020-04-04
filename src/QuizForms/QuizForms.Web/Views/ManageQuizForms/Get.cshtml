@@ -1,0 +1,45 @@
+﻿@model Form
+@{
+    ViewData["Title"] = "Get";
+}
+
+    <h1>Antwoordformulier bekijken</h1>
+
+
+<h2>Basis</h2>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Titel</th>      
+        <th>Type</th>        
+        <th>Opties</th>
+    </tr>
+    @foreach (Question question in Model.Questions)
+    {
+        <tr>
+            <td>@question.Id</td>
+            <td>@question.Title</td>            
+            <td>@question.Type</td>            
+            <td>@question.GetOptionsDescription()</td>
+        </tr>
+    }
+</table>
+
+<h2>Correcte antwoorden</h2>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Correct</th>
+        <th>Punten</th>
+    </tr>
+    @foreach (Question question in Model.Questions)
+    {
+        <tr>
+            <td>@question.Id</td>                        
+            <td>@question.Correct</td>       
+            <td>@question.Points</td>
+        </tr>
+    }
+</table>

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using QuizForms.Data.Models.Forms;
 using QuizForms.Data.Repositories.Abstract;
 using QuizForms.Web.Models.Admin;
 
@@ -29,6 +30,18 @@ namespace QuizForms.Web.Controllers.Admin
             };
 
             return View(model);
+        }
+
+        [HttpGet]
+        [Route("/view/{id}")]
+        public IActionResult Get(string id)
+        {
+            Form form = _formsRepository.GetById(id);
+
+            // TODO: error handling
+            // Redirect to 404 if the form is hidden or inactive
+
+            return View(form);
         }
 
         [HttpPost]

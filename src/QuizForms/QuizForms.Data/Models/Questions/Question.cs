@@ -14,8 +14,14 @@ namespace QuizForms.Data.Models.Questions
 
         [JsonProperty("title")]
         public string Title { get; set; }
+        
+        [JsonProperty("points")]
+        public int Points { get; set; }
 
-        [JsonProperty("description", NullValueHandling = NullValueHandling.Ignore)]
-        public string Description { get; set; } // Optional
+        [JsonProperty("correct", NullValueHandling = NullValueHandling.Ignore)]
+        public string Correct { get; set; } // Optional  
+
+        public virtual string GetOptionsDescription()
+            => "-";
     }
 }

@@ -9,11 +9,5 @@ namespace QuizForms.Data.Models.Questions
 
         [JsonProperty("placeholder", NullValueHandling = NullValueHandling.Ignore)]
         public string Placeholder { get; set; }  // Optional
-
-        [JsonProperty("correct", NullValueHandling = NullValueHandling.Ignore)]
-        public string Correct { get; set; } // Optional
-
-        [JsonProperty("points")]
-        public int Points { get; set; }
     }
 }

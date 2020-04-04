@@ -112,7 +112,7 @@ namespace QuizForms.Data.Repositories.Implementations
                     form.Available = available;
 
                     // Write the form to the file
-                    json = JsonConvert.SerializeObject(form);
+                    json = JsonConvert.SerializeObject(form, Formatting.Indented);
                     File.WriteAllText(filename, json);
 
                     return;
@@ -141,7 +141,7 @@ namespace QuizForms.Data.Repositories.Implementations
                     form.Hidden = hidden;
 
                     // Write the form to the file
-                    json = JsonConvert.SerializeObject(form);
+                    json = JsonConvert.SerializeObject(form, Formatting.Indented);
                     File.WriteAllText(filename, json);
 
                     return;

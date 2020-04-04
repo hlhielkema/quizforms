@@ -11,10 +11,7 @@ namespace QuizForms.Data.Models.Questions
         [JsonProperty("options")]
         public List<string> Options { get; set; }
 
-        [JsonProperty("correct", NullValueHandling = NullValueHandling.Ignore)]
-        public string Correct { get; set; } // Optional
-
-        [JsonProperty("points")]
-        public int Points { get; set; }        
+        public override string GetOptionsDescription()
+            => string.Join(", ", Options);
     }
 }
