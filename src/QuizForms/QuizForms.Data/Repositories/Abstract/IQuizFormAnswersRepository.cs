@@ -4,6 +4,9 @@ using System.Collections.Generic;
 
 namespace QuizForms.Data.Repositories.Abstract
 {
+    /// <summary>
+    /// Quiz forms answers repository
+    /// </summary>
     public interface IQuizFormAnswersRepository
     {
         /// <summary>

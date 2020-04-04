@@ -8,6 +8,9 @@ using System.IO;
 
 namespace QuizForms.Data.Repositories.Implementations
 {
+    /// <summary>
+    /// Quiz forms answers repository
+    /// </summary>
     public sealed class QuizFormAnswersRepository : QuizFormsBaseRepository, IQuizFormAnswersRepository
     {
         /// <summary>
