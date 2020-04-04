@@ -1,7 +1,29 @@
-﻿
+﻿@model AnswerSetsViewModel
 @{
     ViewData["Title"] = "Antwoorden controleren";
 }
 
 <h1>Antwoorden controleren</h1>
+
+
+
+<h2>Antwoorden</h2>
+<table>
+    <tr>
+        <th>Team</th>
+        <th>Punten</th>
+        <th>Acties</th>
+    </tr>
+    @foreach (AnswerSetsItemViewModel set in Model.Sets)
+    {
+        <tr>
+            <td>@set.Team</td>
+            <td>@(set.Points?.ToString() ?? "-")</td>
+            <td>
+                <a class="action" href="/admin/check-answers/@Model.FormId/view/@set.Id">(Bekijken)</a>
+                <a class="action" href="/admin/check-answers/@Model.FormId/check/@set.Id">(Controleren)</a>                
+            </td>
+        </tr>
+    }
+</table>
 

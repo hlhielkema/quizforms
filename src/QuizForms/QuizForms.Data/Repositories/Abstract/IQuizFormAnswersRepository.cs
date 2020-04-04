@@ -23,7 +23,7 @@ namespace QuizForms.Data.Repositories.Abstract
         /// </summary>
         /// <param name="formId">form id</param>
         /// <returns>list with form answer sets</returns>
-        List<FormAnswersSet> GetAll(string formId);
+        List<FormAnswerSet> GetAll(string formId);
 
         /// <summary>
         /// Get a form answers set
@@ -31,7 +31,7 @@ namespace QuizForms.Data.Repositories.Abstract
         /// <param name="formId">form id</param>
         /// <param name="answersId">answers set id</param>
         /// <returns>form answers set or null if not found</returns>
-        FormAnswersSet Get(string formId, Guid answersId);
+        FormAnswerSet Get(string formId, Guid answersId);
 
         /// <summary>
         /// Delete a form answers set.

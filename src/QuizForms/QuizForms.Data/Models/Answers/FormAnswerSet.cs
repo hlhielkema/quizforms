@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace QuizForms.Data.Models.Answers
 {
-    public sealed class FormAnswersSet
+    public sealed class FormAnswerSet
     {
         [JsonProperty("id")]
         public Guid Id { get; set; }

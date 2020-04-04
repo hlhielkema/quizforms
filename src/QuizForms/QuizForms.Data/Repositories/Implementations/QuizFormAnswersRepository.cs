@@ -31,7 +31,7 @@ namespace QuizForms.Data.Repositories.Implementations
         public Guid Create(string formId, string team, Dictionary<string, string> answers)
         {
             // Combine the data into a model
-            FormAnswersSet model = new FormAnswersSet()
+            FormAnswerSet model = new FormAnswerSet()
             {
                 Id = Guid.NewGuid(),
                 Form = formId,
@@ -64,10 +64,10 @@ namespace QuizForms.Data.Repositories.Implementations
         /// </summary>
         /// <param name="formId">form id</param>
         /// <returns>list with form answer sets</returns>
-        public List<FormAnswersSet> GetAll(string formId)
+        public List<FormAnswerSet> GetAll(string formId)
         {
             // Create a list to store the results
-            List<FormAnswersSet> results = new List<FormAnswersSet>();
+            List<FormAnswerSet> results = new List<FormAnswerSet>();
 
             // Get the path for the answers directory of the round.    
             // Return an empty list if it does not exist.
@@ -82,7 +82,7 @@ namespace QuizForms.Data.Repositories.Implementations
                 string json = File.ReadAllText(filename);
 
                 // Parse the JSON
-                results.Add(JsonConvert.DeserializeObject<FormAnswersSet>(json));
+                results.Add(JsonConvert.DeserializeObject<FormAnswerSet>(json));
             }
 
             // Return the list with results
@@ -95,7 +95,7 @@ namespace QuizForms.Data.Repositories.Implementations
         /// <param name="formId">form id</param>
         /// <param name="answersId">answers set id</param>
         /// <returns>form answers set or null if not found</returns>
-        public FormAnswersSet Get(string formId, Guid answersId)
+        public FormAnswerSet Get(string formId, Guid answersId)
         {
             // Construct the expected filename
             string filename = Path.Combine(AnswersPath, formId, string.Format("{0}.json", answersId));
@@ -107,7 +107,7 @@ namespace QuizForms.Data.Repositories.Implementations
                 string json = File.ReadAllText(filename);
 
                 // Parse the JSON and return it
-                return JsonConvert.DeserializeObject<FormAnswersSet>(json);
+                return JsonConvert.DeserializeObject<FormAnswerSet>(json);
             }
             else
                 // File not found, return null
