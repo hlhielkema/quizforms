@@ -1,9 +1,13 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using QuizForms.Data.Models.Answers;
+using QuizForms.Data.Models.Forms;
 using QuizForms.Data.Repositories.Abstract;
 using QuizForms.Web.Models.CheckAnswers;
 using System;
+using System.Collections.Generic;
 using System.Linq;
+using QuizForms.Data.Models.Questions;
 
 namespace QuizForms.Web.Controllers.Admin
 {
@@ -13,11 +17,15 @@ namespace QuizForms.Web.Controllers.Admin
     {
         private readonly IQuizFormsRepository _formsRepository;
         private readonly IQuizFormAnswersRepository _answersRepository;
+        private readonly IQuizFormsScoresRepostiory _scoresRepository;
 
-        public CheckAnswersController(IQuizFormsRepository formsRepository, IQuizFormAnswersRepository answersRepository)
+        public CheckAnswersController(IQuizFormsRepository formsRepository, 
+                                      IQuizFormAnswersRepository answersRepository,
+                                      IQuizFormsScoresRepostiory scoresRepository)
         {
             _formsRepository = formsRepository;
             _answersRepository = answersRepository;
+            _scoresRepository = scoresRepository;
         }
 
         [HttpGet]
@@ -54,7 +62,51 @@ namespace QuizForms.Web.Controllers.Admin
         [Route("{formId}/view/{answersSetId}")]
         public IActionResult View(string formId, Guid answersSetId)
         {
-            return View();
+
+            Form form = _formsRepository.GetById(formId);
+            FormAnswerSet answerSet = _answersRepository.Get(formId, answersSetId);
+            Dictionary<string, int> scores = _scoresRepository.GetScore(formId, answersSetId);
+
+            List<Answer> answers = new List<Answer>();
+
+            int totalAssignedPoints = 0;
+            int totalPoints = 0;
+            int manualCheckingRequiredCount = 0;
+
+            foreach (Question question in form.Questions)
+            {
+                string given = null;
+                if (answerSet.Answers.ContainsKey(question.Id))
+                    given = answerSet.Answers[question.Id];
+
+                int? score = null;
+                if (scores != null && scores.ContainsKey(question.Id))
+                    score = scores[question.Id];
+
+                Answer ans = new Answer(question, given, score);
+                
+                if (!ans.TryAutoAssign())
+                    manualCheckingRequiredCount++;
+
+                totalPoints += question.Points;
+                if (ans.AssignedPoints.HasValue)
+                    totalAssignedPoints += ans.AssignedPoints.Value;
+
+                answers.Add(ans);
+            }
+
+            ViewAnswerSetViewModel model = new ViewAnswerSetViewModel()
+            {
+                FormId = formId,
+                AnswersSetId = answersSetId,
+                Team = answerSet.Team,
+                Answers = answers,
+                Points = totalAssignedPoints,
+                TotalPoints = totalPoints,
+                ManualCheckingRequiredCount = manualCheckingRequiredCount
+            };
+
+            return View(model);
         }
 
         [HttpGet]

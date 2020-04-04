@@ -317,5 +317,7 @@ table {
     color: green; }
   table .red {
     color: red; }
+  table .yellow {
+    color: yellow; }
   table div {
     float: left; }

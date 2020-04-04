@@ -73,23 +73,26 @@
     {
       "type": "text",
       "title": "Antwoord vraag 7",
-      "points": 2
+      "points": 2,
+      "correct": "antwoord hier"
     },
     {
       "type": "text",
       "title": "Antwoord vraag 8",
-      "points": 2
+      "points": 2,
+      "correct": "antwoord hier"
     },
     {
       "type": "text",
       "title": "Antwoord vraag 9",
       "points": 2,
-      "correct": "Broodje kip"
+      "correct": "Broodje kip",
     },
     {
       "type": "text",
       "title": "Antwoord vraag 10",
-      "points": 2
+      "points": 2,
+      "correct": "antwoord hier"
     }
   ]
 }

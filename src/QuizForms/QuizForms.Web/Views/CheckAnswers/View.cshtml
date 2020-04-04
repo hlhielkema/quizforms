@@ -1,7 +1,80 @@
 ﻿@using QuizForms.Web.Models.CheckAnswers;
+@model ViewAnswerSetViewModel;
 @{
     ViewData["Title"] = "Ingevulde antwoorden bekijken";
 }
 
 <h1>Ingevulde antwoorden bekijken</h1>
 
+<table>
+    <tr>
+        <td>Team</td>
+        <td>@Model.Team</td>
+    </tr>
+    <tr>
+        <td>Punten</td>
+        @if (Model.ManualCheckingRequiredCount > 0)
+        {
+            <td class="yellow">Minimaal @Model.Points van de @Model.TotalPoints punten.</td>
+        }
+        else
+        {
+            <td class="green">@Model.Points van de @Model.TotalPoints punten.</td>
+        }
+    </tr>
+    <tr>
+        <td>Handmatig controleren nodig</td>
+        <td>@Model.ManualCheckingRequiredCount</td>
+    </tr>
+</table>
+
+@foreach (Answer answer in Model.Answers)
+{
+    <h2>@answer.QuestionTitle</h2>
+    <table>
+        <tr>
+            <td>Correcte antwoord</td>
+            <td>@answer.Correct</td>
+        </tr>
+        <tr>
+            <td>Gegeven antwoord</td>
+            @if (answer.AssignedPoints.HasValue)
+            {
+                if (answer.AssignedPoints.Value == 0)
+                {                    
+                    if (string.IsNullOrEmpty(answer.Given))
+                    {
+                        <td class="red">[LEGE WAARDE]</td>
+                    }
+                    else
+                    {
+                        <td class="red">@answer.Given</td>
+                    }
+                }
+                else
+                {
+                    <td class="green">@answer.Given</td>
+                }
+            }
+            else
+            {
+                <td class="yellow">@answer.Given</td>
+            }
+        </tr>
+        <tr>
+            <td>Maximaal aantal punten</td>
+            <td>@answer.QuestionPoints</td>
+        </tr>
+        <tr>
+            <td>Toegewezen punten</td>
+            @if (answer.AssignedPoints.HasValue)
+            {
+                <td>@answer.AssignedPoints</td>
+            }
+            else
+            {
+                <td class="yellow">[Handmatig controleren nodig]</td>
+            }
+        </tr>
+    </table>
+}

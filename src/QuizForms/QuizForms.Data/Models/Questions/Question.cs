@@ -18,8 +18,8 @@ namespace QuizForms.Data.Models.Questions
         [JsonProperty("points")]
         public int Points { get; set; }
 
-        [JsonProperty("correct", NullValueHandling = NullValueHandling.Ignore)]
-        public string Correct { get; set; } // Optional  
+        [JsonProperty("correct")]
+        public string Correct { get; set; }
 
         public virtual string GetOptionsDescription()
             => "-";
