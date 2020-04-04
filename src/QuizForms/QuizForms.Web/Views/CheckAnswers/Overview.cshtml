@@ -1,4 +1,5 @@
-﻿@model AnswersFormOverviewViewModel
+﻿@using QuizForms.Web.Models.CheckAnswers;
+@model AnswersFormOverviewViewModel;
 @{
     ViewData["Title"] = "Formulieren overzicht";
 }
@@ -18,25 +19,25 @@
             <td>
                 @if (form.Available)
                 {
-                    <div class="green">Beschikbaar</div>                   
+                    <div class="green">Beschikbaar</div>
                 }
                 else
                 {
-                    <div class="red">Gesloten</div>                    
+                    <div class="red">Gesloten</div>
                 }
             </td>
             <td>
                 @if (form.Hidden)
                 {
-                    <div class="red">Verborgen</div>                    
+                    <div class="red">Verborgen</div>
                 }
                 else
                 {
-                    <div class="green">Zichtbaar</div>                    
+                    <div class="green">Zichtbaar</div>
                 }
             </td>
             <td>
-                <a class="action" href="/admin/check-answers/@form.Id">(controleren)</a>                
+                <a class="action" href="/admin/check-answers/@form.Id">(controleren)</a>
             </td>
         </tr>
     }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using QuizForms.Data.Repositories.Abstract;
 using QuizForms.Web.Models;
+using QuizForms.Web.Models.Contact;
 
 namespace QuizForms.Web.Controllers.Public
 {

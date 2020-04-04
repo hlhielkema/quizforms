@@ -9,7 +9,7 @@ namespace QuizForms.Web.Controllers.Admin
 {
     [Authorize]
     [Route("admin/scoreboard")]    
-    public class ScoreboardController : Controller
+    public class ManageScoreboardController : Controller
     {
         [HttpGet]
         public IActionResult Index()

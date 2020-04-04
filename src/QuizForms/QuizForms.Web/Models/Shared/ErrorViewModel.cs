@@ -1,6 +1,6 @@
 using System;
 
-namespace QuizForms.Web.Models
+namespace QuizForms.Web.Models.Shared
 {
     public class ErrorViewModel
     {

@@ -1,4 +1,5 @@
-﻿@model SignInModel
+﻿@using QuizForms.Web.Models.Authentication;
+@model SignInModel;
 @{
     ViewData["Title"] = "Sign-in";
 }
@@ -16,7 +17,7 @@
     <span asp-validation-for="Password"></span>
     <br><br>
 
-    <input asp-for="Redirect" />    
-    
+    <input asp-for="Redirect" />
+
     <input type="submit" value="Inloggen" formmethod="post">
 </form>

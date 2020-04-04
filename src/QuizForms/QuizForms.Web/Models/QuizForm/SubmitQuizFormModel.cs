@@ -1,8 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace QuizForms.Web.Models
+namespace QuizForms.Web.Models.QuizForm
 {
     public class SubmitQuizFormModel
     {  

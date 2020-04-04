@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using QuizForms.Data.Models.Forms;
 using QuizForms.Data.Repositories.Abstract;
-using QuizForms.Web.Models.Admin;
+using QuizForms.Web.Models.CheckAnswers;
+using System;
+using System.Linq;
 
 namespace QuizForms.Web.Controllers.Admin
-{    
+{
     [Authorize]
     [Route("admin/check-answers")]
     public class CheckAnswersController : Controller

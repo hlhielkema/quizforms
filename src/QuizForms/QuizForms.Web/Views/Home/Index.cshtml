@@ -1,4 +1,5 @@
-﻿@model HomeViewModel
+﻿@using QuizForms.Web.Models.Home;
+@model HomeViewModel
 @{
     ViewData["Title"] = "Welcome";
 }
@@ -11,16 +12,16 @@
 <ul>
     @foreach (FormInfo form in Model.VisibleForms)
     {
-    <li>
-        @if (form.Available)
-        {
-            <a href="/forms/@form.Id">@form.Title <span>🠆</span></a>
-        }
-        else
-        {
-            <div class="locked-form">@form.Title <span>🔒</span></div>         
-        }
-    </li>
+        <li>
+            @if (form.Available)
+            {
+                <a href="/forms/@form.Id">@form.Title <span>🠆</span></a>
+            }
+            else
+            {
+                <div class="locked-form">@form.Title <span>🔒</span></div>
+            }
+        </li>
     }
 </ul>
 

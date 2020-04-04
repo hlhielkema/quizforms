@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace QuizForms.Web.Models.Admin
+namespace QuizForms.Web.Models.Account
 {
     public sealed class ManageAccountsViewModel
     {

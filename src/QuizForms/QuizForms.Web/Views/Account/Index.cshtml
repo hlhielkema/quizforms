@@ -1,4 +1,5 @@
-﻿@model ManageAccountsViewModel
+﻿@using QuizForms.Web.Models.Account;
+@model ManageAccountsViewModel;
 @{
     ViewData["Title"] = "Accounts";
 }
@@ -26,7 +27,7 @@
             <td>
                 @renderAction(new ActionButton("delete", username, "(verwijder)"))
                 <a class="action" href="/admin/accounts/update-password/@username">(wachtwoord wijzigen)</a>
-            </td>            
+            </td>
         </tr>
     }
 </table>

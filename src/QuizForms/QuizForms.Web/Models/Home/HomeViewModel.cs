@@ -1,7 +1,7 @@
 ﻿using QuizForms.Data.Models.Forms;
 using System.Collections.Generic;
 
-namespace QuizForms.Web.Models
+namespace QuizForms.Web.Models.Home
 {
     public class HomeViewModel
     {

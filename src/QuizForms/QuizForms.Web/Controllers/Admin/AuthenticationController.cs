@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using QuizForms.Data.Repositories.Abstract;
 using QuizForms.Web.Models;
+using QuizForms.Web.Models.Authentication;
 using System.Threading.Tasks;
 
 namespace QuizForms.Web.Controllers.Admin

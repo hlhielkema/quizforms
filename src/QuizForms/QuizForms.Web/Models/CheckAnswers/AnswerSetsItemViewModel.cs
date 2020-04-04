@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace QuizForms.Web.Models.Admin
+namespace QuizForms.Web.Models.CheckAnswers
 {
     public class AnswerSetsItemViewModel
     {

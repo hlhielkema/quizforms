@@ -2,6 +2,8 @@
 using Microsoft.Extensions.Logging;
 using QuizForms.Data.Repositories.Abstract;
 using QuizForms.Web.Models;
+using QuizForms.Web.Models.Home;
+using QuizForms.Web.Models.Shared;
 using System.Diagnostics;
 
 namespace QuizForms.Web.Controllers.Public

@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace QuizForms.Web.Models.Admin
+namespace QuizForms.Web.Models.CheckAnswers
 {
     public class AnswerSetsViewModel
     {

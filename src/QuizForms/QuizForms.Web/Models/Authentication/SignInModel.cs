@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 
-namespace QuizForms.Web.Models
+namespace QuizForms.Web.Models.Authentication
 {
     public sealed class SignInModel
     {

@@ -17,6 +17,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Models\Admin\" />
+    <Folder Include="Models\Livestream\" />
+    <Folder Include="Models\ManageLivestream\" />
+    <Folder Include="Models\ManageContact\" />
+    <Folder Include="Models\ManageScoreboard\" />
     <Folder Include="wwwroot\lib\" />
   </ItemGroup>
 

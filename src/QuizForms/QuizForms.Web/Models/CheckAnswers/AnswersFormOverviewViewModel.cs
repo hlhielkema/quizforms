@@ -1,7 +1,7 @@
 ﻿using QuizForms.Data.Models.Forms;
 using System.Collections.Generic;
 
-namespace QuizForms.Web.Models.Admin
+namespace QuizForms.Web.Models.CheckAnswers
 {
     public class AnswersFormOverviewViewModel
     {

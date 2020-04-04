@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace QuizForms.Web.Models.Admin
+namespace QuizForms.Web.Models.Account
 {
     public sealed class CreateAccountModel
     {

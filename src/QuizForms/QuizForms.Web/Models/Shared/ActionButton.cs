@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace QuizForms.Web.Models
+namespace QuizForms.Web.Models.Shared
 {
     public class ActionButton
     {

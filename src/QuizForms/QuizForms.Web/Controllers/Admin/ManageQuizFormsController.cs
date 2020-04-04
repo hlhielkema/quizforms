@@ -6,7 +6,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using QuizForms.Data.Models.Forms;
 using QuizForms.Data.Repositories.Abstract;
-using QuizForms.Web.Models.Admin;
+using QuizForms.Web.Models.Account;
+using QuizForms.Web.Models.ManageQuizForms;
 
 namespace QuizForms.Web.Controllers.Admin
 {

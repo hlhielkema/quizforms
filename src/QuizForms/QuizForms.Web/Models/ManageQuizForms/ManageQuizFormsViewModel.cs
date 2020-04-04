@@ -1,10 +1,7 @@
 ﻿using QuizForms.Data.Models.Forms;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace QuizForms.Web.Models.Admin
+namespace QuizForms.Web.Models.ManageQuizForms
 {
     public class ManageQuizFormsViewModel
     {

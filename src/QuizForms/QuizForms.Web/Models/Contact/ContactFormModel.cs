@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace QuizForms.Web.Models
+namespace QuizForms.Web.Models.Contact
 {
     public class ContactFormModel
     {
