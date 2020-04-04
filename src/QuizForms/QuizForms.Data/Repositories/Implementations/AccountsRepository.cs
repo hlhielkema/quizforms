@@ -71,6 +71,9 @@ namespace QuizForms.Data.Repositories.Implementations
         /// </returns>
         public async Task<bool> Exists(string username)
         {
+            // Convert the username to lowercase
+            username = username.ToLower();
+
             // Asynchronously wait to enter the semaphore
             await _semaphore.WaitAsync();
 
@@ -100,6 +103,9 @@ namespace QuizForms.Data.Repositories.Implementations
         /// </returns>
         public async Task<bool> CreateAccount(string username, string password)
         {
+            // Convert the username to lowercase
+            username = username.ToLower();
+
             // Asynchronously wait to enter the semaphore
             await _semaphore.WaitAsync();
 
@@ -143,6 +149,9 @@ namespace QuizForms.Data.Repositories.Implementations
         /// </returns>
         public async Task<bool> ValidateCredentials(string username, string password)
         {
+            // Convert the username to lowercase
+            username = username.ToLower();
+
             // Asynchronously wait to enter the semaphore
             await _semaphore.WaitAsync();
 
@@ -202,6 +211,9 @@ namespace QuizForms.Data.Repositories.Implementations
         /// </returns>
         public async Task<bool> ResetPassword(string username, string password)
         {
+            // Convert the username to lowercase
+            username = username.ToLower();
+
             // Asynchronously wait to enter the semaphore
             await _semaphore.WaitAsync();
 
@@ -246,6 +258,9 @@ namespace QuizForms.Data.Repositories.Implementations
         /// </returns
         public async Task<bool> DeleteAccount(string username)
         {
+            // Convert the username to lowercase
+            username = username.ToLower();
+
             // Asynchronously wait to enter the semaphore
             await _semaphore.WaitAsync();
 
@@ -283,6 +298,9 @@ namespace QuizForms.Data.Repositories.Implementations
         /// <returns>claim principal</returns>
         public ClaimsPrincipal CreateClaimPrincipal(string username)
         {
+            // Convert the username to lowercase
+            username = username.ToLower();
+
             IIdentity identity = new QuizFormsIdentity(username);
             return new ClaimsPrincipal(identity);
         }
@@ -317,7 +335,7 @@ namespace QuizForms.Data.Repositories.Implementations
             }
             else
             {
-                string json = JsonConvert.SerializeObject(accounts);
+                string json = JsonConvert.SerializeObject(accounts, Formatting.Indented);
                 File.WriteAllText(filename, json);
             }
         }

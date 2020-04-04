@@ -62,7 +62,7 @@ namespace QuizForms.Web.Controllers.Admin
         }
 
         [AllowAnonymous]
-        [Route("sign-out")]
+        [Route("/sign-out")]
         [HttpGet]
         public async Task<IActionResult> SignOut()
         {

@@ -305,6 +305,7 @@ table {
     text-transform: uppercase;
     font-weight: 600; }
   table .action {
+    float: left;
     color: #a7a9be;
     padding: 0 4px;
     background: 0;

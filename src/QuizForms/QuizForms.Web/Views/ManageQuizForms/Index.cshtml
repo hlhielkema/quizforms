@@ -4,19 +4,15 @@
 }
 
 @{    
-    Func<ActionButton, IHtmlContent> renderAction = @<form action="/update" method="post" class="submit-action-form hidden">
+    Func<ActionButton, IHtmlContent> renderAction = @<form action="/admin/forms/update" method="post" class="submit-action-form hidden">
         <input type="hidden" name="action" value="@item.Action" />
         <input type="hidden" name="id" value="@item.Id" />
         <input type="submit" value="@item.Label" class="action">
         @Html.AntiForgeryToken()
     </form>;
 }
-
 <h1>Formulieren beheren</h1>
-
-
 <h2>Antwoordformulieren</h2>
-
 <table>
     <tr>
         <th>Titel</th>
@@ -53,7 +49,7 @@
                 }
             </td>
             <td>                
-                <a class="action" href="/view/@form.Id">Details</a>
+                <a class="action" href="/admin/forms/view/@form.Id">(details)</a>
             </td>
         </tr>
     }

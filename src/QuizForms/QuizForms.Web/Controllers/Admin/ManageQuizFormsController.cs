@@ -33,7 +33,7 @@ namespace QuizForms.Web.Controllers.Admin
         }
 
         [HttpGet]
-        [Route("/view/{id}")]
+        [Route("view/{id}")]
         public IActionResult Get(string id)
         {
             Form form = _formsRepository.GetById(id);
@@ -45,7 +45,7 @@ namespace QuizForms.Web.Controllers.Admin
         }
 
         [HttpPost]
-        [Route("/update")]
+        [Route("update")]
         [ValidateAntiForgeryToken]
         public IActionResult Update(string action, string id)
         {
