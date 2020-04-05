@@ -45,6 +45,8 @@ namespace QuizForms.Web.Controllers.Admin
         [Route("{formId}")]
         public IActionResult Index(string formId)
         {
+            
+
             AnswerSetsViewModel model = new AnswerSetsViewModel()
             {
                 FormId = formId,
@@ -52,7 +54,7 @@ namespace QuizForms.Web.Controllers.Admin
                 {
                     Id = x.Id,
                     Team = x.Team,
-                    Points = null // todo
+                    Points = _scoresRepository.GetTotalScore(formId, x.Id)
                 }).ToList()
             };
             
