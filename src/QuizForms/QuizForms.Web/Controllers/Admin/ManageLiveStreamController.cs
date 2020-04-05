@@ -11,10 +11,10 @@ namespace QuizForms.Web.Controllers.Admin
     [Route("admin/livestream")]
     public class ManageLiveStreamController : Controller
     {
-        [HttpGet]
-        public IActionResult Index()
-        {
-            return View();
-        }
+        //[HttpGet]
+        //public IActionResult Index()
+        //{
+        //    return View();
+        //}
     }
 }
