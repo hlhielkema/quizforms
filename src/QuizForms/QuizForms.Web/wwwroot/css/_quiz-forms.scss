@@ -1,36 +1,16 @@
-﻿form.quiz-form {
+﻿form.basic-form {
     float: left;
     width: 100%;
     margin-bottom: 128px;
 
-    > .submit {
-        float: left;
-        background: #ff8906;
-        color: #fffffe;
-        padding: 16px 24px;
-        box-sizing: border-box;
-        margin-top: 32px;
-        font-weight: 600;
-        border-radius: 4px;
-        font-size: 15px;
-        cursor: pointer;
-
-        &:hover {
-            background: #d8770b;
-        }
-
-        &.working {
-            background: #424242;
-            cursor: not-allowed;
-        }
-
-        &.done {
-            background: #4CAF50;
-            opacity: 0.4;
-            cursor: not-allowed;
-        }
+    @media only screen and (max-width: 600px) {
+        margin: 0 -16px;
+        margin-bottom: 132px;
+        width: calc(100% + 32px);
     }
+}
 
+form.quiz-form {
     > .question {
         float: left;
         width: 100%;
@@ -112,11 +92,7 @@
         }
     }
 
-    @media only screen and (max-width: 600px) {
-        margin: 0 -16px;
-        margin-bottom: 132px;
-        width: calc(100% + 32px);
-
+    @media only screen and (max-width: 600px) {       
         > .question {
             border-left: 0;
             border-right: 0;
@@ -126,13 +102,44 @@
         > .question.question-text input {
             max-width: 100%;
         }
+    }
+}
 
-        > .submit {
-            margin-left: 16px;
-            margin-top: 56px;
-            width: calc(100% - 32px);
-            text-align: center;
-            margin-bottom: 64px;
-        }
+
+form > .submit {
+    float: left;
+    background: #ff8906;
+    color: #fffffe;
+    padding: 16px 24px;
+    box-sizing: border-box;
+    margin-top: 32px;
+    font-weight: 600;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+
+    &:hover {
+        background: #d8770b;
+    }
+
+    &.working {
+        background: #424242;
+        cursor: not-allowed;
+    }
+
+    &.done {
+        background: #4CAF50;
+        opacity: 0.4;
+        cursor: not-allowed;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    form > .submit {
+        margin-left: 16px;
+        margin-top: 56px;
+        width: calc(100% - 32px);
+        text-align: center;
+        margin-bottom: 64px;
     }
 }

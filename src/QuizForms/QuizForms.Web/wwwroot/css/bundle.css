@@ -173,106 +173,114 @@ ul li a span {
 ul li a:hover span {
   margin-left: 10px; }
 
-form.quiz-form {
+form.basic-form {
   float: left;
   width: 100%;
   margin-bottom: 128px; }
-  form.quiz-form > .submit {
-    float: left;
-    background: #ff8906;
-    color: #fffffe;
-    padding: 16px 24px;
-    box-sizing: border-box;
-    margin-top: 32px;
-    font-weight: 600;
-    border-radius: 4px;
-    font-size: 15px;
-    cursor: pointer; }
-    form.quiz-form > .submit:hover {
-      background: #d8770b; }
-    form.quiz-form > .submit.working {
-      background: #424242;
-      cursor: not-allowed; }
-    form.quiz-form > .submit.done {
-      background: #4CAF50;
-      opacity: 0.4;
-      cursor: not-allowed; }
-  form.quiz-form > .question {
-    float: left;
-    width: 100%;
-    border: solid 3px #000;
-    border-radius: 4px;
-    box-sizing: border-box;
-    padding: 8px 16px;
-    margin-top: 16px;
-    background: #101017; }
-    form.quiz-form > .question > h4 {
-      float: left;
-      width: 100%;
-      margin: 8px 0; }
-  form.quiz-form > .question.question-multiple-choice > div > .option {
-    float: left;
-    width: 100%;
-    margin: 12px 0;
-    cursor: pointer; }
-    form.quiz-form > .question.question-multiple-choice > div > .option > .box {
-      float: left;
-      width: 16px;
-      height: 16px;
-      border: solid 2px #ccc;
-      border-radius: 50%;
-      position: relative; }
-    form.quiz-form > .question.question-multiple-choice > div > .option > .label {
-      float: left;
-      margin-left: 16px;
-      font-size: 14px;
-      line-height: 20px;
-      font-weight: 600; }
-    form.quiz-form > .question.question-multiple-choice > div > .option:hover {
-      color: #fff;
-      border-color: #fff; }
-    form.quiz-form > .question.question-multiple-choice > div > .option.selected .box {
-      border-color: #ff8906; }
-      form.quiz-form > .question.question-multiple-choice > div > .option.selected .box:after {
-        content: ' ';
-        height: 38px;
-        width: 55px;
-        position: absolute;
-        top: -11px;
-        left: -11px;
-        border-radius: 50%;
-        background: url(/img/virus.svg) no-repeat;
-        background-size: contain; }
-  form.quiz-form > .question.question-text input {
-    float: left;
-    width: 100%;
-    max-width: 500px;
-    box-sizing: border-box;
-    background: none;
-    border: 0;
-    border-bottom: solid 1px #656565;
-    padding: 12px 8px;
-    color: #fff;
-    outline: 0;
-    border-radius: 0; }
-    form.quiz-form > .question.question-text input:focus {
-      border-color: #ff8906; }
   @media only screen and (max-width: 600px) {
-    form.quiz-form {
+    form.basic-form {
       margin: 0 -16px;
       margin-bottom: 132px;
-      width: calc(100% + 32px); }
-      form.quiz-form > .question {
-        border-left: 0;
-        border-right: 0; }
-      form.quiz-form > .question.question-text input {
-        max-width: 100%; }
-      form.quiz-form > .submit {
-        margin-left: 16px;
-        margin-top: 56px;
-        width: calc(100% - 32px);
-        text-align: center;
-        margin-bottom: 64px; } }
+      width: calc(100% + 32px); } }
+
+form.quiz-form > .question {
+  float: left;
+  width: 100%;
+  border: solid 3px #000;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 8px 16px;
+  margin-top: 16px;
+  background: #101017; }
+  form.quiz-form > .question > h4 {
+    float: left;
+    width: 100%;
+    margin: 8px 0; }
+
+form.quiz-form > .question.question-multiple-choice > div > .option {
+  float: left;
+  width: 100%;
+  margin: 12px 0;
+  cursor: pointer; }
+  form.quiz-form > .question.question-multiple-choice > div > .option > .box {
+    float: left;
+    width: 16px;
+    height: 16px;
+    border: solid 2px #ccc;
+    border-radius: 50%;
+    position: relative; }
+  form.quiz-form > .question.question-multiple-choice > div > .option > .label {
+    float: left;
+    margin-left: 16px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600; }
+  form.quiz-form > .question.question-multiple-choice > div > .option:hover {
+    color: #fff;
+    border-color: #fff; }
+  form.quiz-form > .question.question-multiple-choice > div > .option.selected .box {
+    border-color: #ff8906; }
+    form.quiz-form > .question.question-multiple-choice > div > .option.selected .box:after {
+      content: ' ';
+      height: 38px;
+      width: 55px;
+      position: absolute;
+      top: -11px;
+      left: -11px;
+      border-radius: 50%;
+      background: url(/img/virus.svg) no-repeat;
+      background-size: contain; }
+
+form.quiz-form > .question.question-text input {
+  float: left;
+  width: 100%;
+  max-width: 500px;
+  box-sizing: border-box;
+  background: none;
+  border: 0;
+  border-bottom: solid 1px #656565;
+  padding: 12px 8px;
+  color: #fff;
+  outline: 0;
+  border-radius: 0; }
+  form.quiz-form > .question.question-text input:focus {
+    border-color: #ff8906; }
+
+@media only screen and (max-width: 600px) {
+  form.quiz-form > .question {
+    border-left: 0;
+    border-right: 0; }
+  form.quiz-form > .question.question-text input {
+    max-width: 100%; } }
+
+form > .submit {
+  float: left;
+  background: #ff8906;
+  color: #fffffe;
+  padding: 16px 24px;
+  box-sizing: border-box;
+  margin-top: 32px;
+  font-weight: 600;
+  border-radius: 4px;
+  font-size: 15px;
+  cursor: pointer; }
+  form > .submit:hover {
+    background: #d8770b; }
+  form > .submit.working {
+    background: #424242;
+    cursor: not-allowed; }
+  form > .submit.done {
+    background: #4CAF50;
+    opacity: 0.4;
+    cursor: not-allowed; }
+
+@media only screen and (max-width: 600px) {
+  form > .submit {
+    margin-left: 16px;
+    margin-top: 56px;
+    width: calc(100% - 32px);
+    text-align: center;
+    margin-bottom: 64px; } }
 
 .stream-header {
   float: left;
@@ -321,3 +329,27 @@ table {
     color: yellow; }
   table div {
     float: left; }
+  table.split-2 td {
+    width: 50%; }
+  table .score-selector {
+    float: left; }
+    table .score-selector .score-option {
+      float: left;
+      width: 22px;
+      height: 22px;
+      text-align: center;
+      line-height: 22px;
+      margin-right: 8px;
+      border-radius: 50%;
+      border: solid 2px #ccc;
+      cursor: pointer; }
+      table .score-selector .score-option:hover {
+        border-color: #ff8906; }
+      table .score-selector .score-option.selected {
+        background: #ccc;
+        color: #000;
+        border-color: #ccc; }
+        table .score-selector .score-option.selected.unkown {
+          font-weight: 600;
+          background: red;
+          border-color: red; }

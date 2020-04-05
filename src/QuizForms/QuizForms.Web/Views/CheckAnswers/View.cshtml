@@ -1,12 +1,12 @@
-﻿@using QuizForms.Web.Models.CheckAnswers;
-@model ViewAnswerSetViewModel;
+﻿@using QuizForms.Data.Models.Answers;
+@model ExtendedFormAnswersSet;
 @{
     ViewData["Title"] = "Ingevulde antwoorden bekijken";
 }
 
 <h1>Ingevulde antwoorden bekijken</h1>
 
-<table>
+<table class="split-2">
     <tr>
         <td>Team</td>
         <td>@Model.Team</td>
@@ -28,10 +28,10 @@
     </tr>
 </table>
 
-@foreach (Answer answer in Model.Answers)
+@foreach (ExtendedAnswer answer in Model.Answers)
 {
     <h2>@answer.QuestionTitle</h2>
-    <table>
+    <table class="split-2">
         <tr>
             <td>Correcte antwoord</td>
             <td>@answer.Correct</td>

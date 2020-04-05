@@ -40,7 +40,7 @@ namespace QuizForms.Data.Repositories.Abstract
         /// Get a form by its id.
         /// </summary>
         /// <param name="id"></param>
-        /// <returns>form</returns>
+        /// <returns>form or null if not found</returns>
         Form GetById(string id);
 
         /// <summary>

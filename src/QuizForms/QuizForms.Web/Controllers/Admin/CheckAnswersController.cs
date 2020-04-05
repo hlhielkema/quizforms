@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using QuizForms.Data.Models.Questions;
+using QuizForms.Data.Utilities;
 
 namespace QuizForms.Web.Controllers.Admin
 {
@@ -62,49 +63,21 @@ namespace QuizForms.Web.Controllers.Admin
         [Route("{formId}/view/{answersSetId}")]
         public IActionResult View(string formId, Guid answersSetId)
         {
-
+            // Try to get the quiz form
             Form form = _formsRepository.GetById(formId);
-            FormAnswerSet answerSet = _answersRepository.Get(formId, answersSetId);
+            if (form == null)
+                return NotFound();
+
+            // Try to get the answers set
+            FormAnswersSet answerSet = _answersRepository.Get(formId, answersSetId);
+            if (answerSet == null)
+                return NotFound();
+
+            // Try to get the existing scores
             Dictionary<string, int> scores = _scoresRepository.GetScore(formId, answersSetId);
 
-            List<Answer> answers = new List<Answer>();
-
-            int totalAssignedPoints = 0;
-            int totalPoints = 0;
-            int manualCheckingRequiredCount = 0;
-
-            foreach (Question question in form.Questions)
-            {
-                string given = null;
-                if (answerSet.Answers.ContainsKey(question.Id))
-                    given = answerSet.Answers[question.Id];
-
-                int? score = null;
-                if (scores != null && scores.ContainsKey(question.Id))
-                    score = scores[question.Id];
-
-                Answer ans = new Answer(question, given, score);
-                
-                if (!ans.TryAutoAssign())
-                    manualCheckingRequiredCount++;
-
-                totalPoints += question.Points;
-                if (ans.AssignedPoints.HasValue)
-                    totalAssignedPoints += ans.AssignedPoints.Value;
-
-                answers.Add(ans);
-            }
-
-            ViewAnswerSetViewModel model = new ViewAnswerSetViewModel()
-            {
-                FormId = formId,
-                AnswersSetId = answersSetId,
-                Team = answerSet.Team,
-                Answers = answers,
-                Points = totalAssignedPoints,
-                TotalPoints = totalPoints,
-                ManualCheckingRequiredCount = manualCheckingRequiredCount
-            };
+            // Combine the data into a extended form answers model
+            ExtendedFormAnswersSet model = AnswerChecking.ConstructExtendedFormAnswersSet(answerSet, form, scores);
 
             return View(model);
         }
@@ -113,7 +86,45 @@ namespace QuizForms.Web.Controllers.Admin
         [Route("{formId}/check/{answersSetId}")]
         public IActionResult Check(string formId, Guid answersSetId)
         {
-            return View();
+            // Try to get the quiz form
+            Form form = _formsRepository.GetById(formId);
+            if (form == null)
+                return NotFound();
+
+            // Try to get the answers set
+            FormAnswersSet answerSet = _answersRepository.Get(formId, answersSetId);
+            if (answerSet == null)
+                return NotFound();
+
+            // Try to get the existing scores
+            Dictionary<string, int> scores = _scoresRepository.GetScore(formId, answersSetId);
+
+            // Combine the data into a extended form answers model
+            ExtendedFormAnswersSet model = AnswerChecking.ConstructExtendedFormAnswersSet(answerSet, form, scores);
+
+            return View(model);
+        }
+
+        [Route("{formId}/check/{answersSetId}")]
+        [HttpPost]
+        [ValidateAntiForgeryToken]        
+        public IActionResult Check(string formId, Guid answersSetId, [FromBody] SubmitScoreModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                // TODO: Check if form and answers exist
+
+                Dictionary<string, int> scores = model.Scores.ToDictionary(x => x.Key, x => x.Value);
+                _scoresRepository.UpdateScore(formId, answersSetId, scores);
+
+                // Success, return 200 status
+                return Ok();
+            }
+            else
+            {
+                // Invalid model, return 400 status
+                return BadRequest("Invalid model data");
+            }
         }
     }
 }

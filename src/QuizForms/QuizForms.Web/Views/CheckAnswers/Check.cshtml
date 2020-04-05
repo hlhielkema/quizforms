@@ -1,7 +1,91 @@
-﻿@using QuizForms.Web.Models.CheckAnswers;
+﻿@using QuizForms.Data.Models.Answers;
+@model ExtendedFormAnswersSet;
 @{
-    ViewData["Title"] = "Ingevulde antwoorden controleren";
+    ViewData["Title"] = "Ingevulde antwoorden bekijken";
 }
 
 <h1>Ingevulde antwoorden controleren</h1>
 
+<table class="split-2">
+    <tr>
+        <td>Team</td>
+        <td>@Model.Team</td>
+    </tr>
+    <tr>
+        <td>Handmatig controleren nodig</td>
+        <td>@Model.ManualCheckingRequiredCount</td>
+    </tr>
+</table>
+
+<form asp-controller="CheckAnswers" asp-action="Check" method="post" class="basic-form" data-redirect-after-submit="/admin/check-answers/@Model.Form">
+    @foreach (ExtendedAnswer answer in Model.Answers)
+    {
+        <h2>@answer.QuestionTitle</h2>
+        <table class="split-2">
+            <tr>
+                <td>Correcte antwoord</td>
+                <td>@answer.Correct</td>
+            </tr>
+            <tr>
+                <td>Gegeven antwoord</td>
+                @if (answer.AssignedPoints.HasValue)
+                {
+                    if (answer.AssignedPoints.Value == 0)
+                    {
+                        if (string.IsNullOrEmpty(answer.Given))
+                        {
+                            <td>[LEGE WAARDE]</td>
+                        }
+                        else
+                        {
+                            <td>@answer.Given</td>
+                        }
+                    }
+                    else
+                    {
+                        <td>@answer.Given</td>
+                    }
+                }
+                else
+                {
+                    <td>@answer.Given</td>
+                }
+            </tr>
+            <tr>
+                <td>
+                    Score
+                </td>
+                <td>
+                    <div class="score-selector">
+                        <input name="@answer.QuestionId" type="hidden" value="@answer.AssignedPoints" />
+                        @if (answer.AssignedPoints.HasValue)
+                        {
+                            <div data-value="" class="score-option unkown">?</div>
+                        }
+                        else
+                        {
+                            <div data-value="" class="score-option unkown selected">?</div>
+                        }
+                        @for (int i = 0; i <= answer.QuestionPoints; i++)
+                        {
+                            if (answer.AssignedPoints.HasValue && answer.AssignedPoints.Value == i)
+                            {
+                                <div data-value="@i" class="score-option selected">@i</div>
+                            }
+                            else
+                            {
+                                <div data-value="@i" class="score-option">@i</div>
+                            }
+                        }
+                    </div>
+                </td>
+            </tr>
+        </table>
+    }
+    <div class="submit">Score versturen</div>
+</form>
+
+@section Scripts
+{
+    <script src="~/js/check-answers.js"></script>
+}
