@@ -1,7 +1,7 @@
 ﻿@using QuizForms.Web.Models.Home;
 @model HomeViewModel
 @{
-    ViewData["Title"] = "Welcome";
+    ViewData["Title"] = "Corona Quiz";
 }
 
 <h1>Corona Quiz</h1>
@@ -15,7 +15,7 @@
         <li>
             @if (form.Available)
             {
-                <a href="/forms/@form.Id">@form.Title <span>🠆</span></a>
+                <a href="/forms/@form.Id">@form.Title <span>➡️</span></a>
             }
             else
             {
@@ -28,15 +28,15 @@
 <h2>Links</h2>
 <ul>
     <li>
-        <a href="/livestream/twitch" target="_blank">Live stream <span>🠆</span></a>
+        <a href="/livestream/twitch" target="_blank">Live stream <span>➡️</span></a>
     </li>
     <li>
-        <a href="/contact">Contact <span>🠆</span></a>
+        <a href="/contact">Contact <span>➡️</span></a>
     </li>
     <li>
-        <a href="/about">Over ons <span>🠆</span></a>
+        <a href="/about">Over ons <span>➡️</span></a>
     </li>
     <li>
-        <a href="/admin">Administrator paneel <span>🠆</span></a>
+        <a href="/admin">Administrator paneel <span>➡️</span></a>
     </li>
 </ul>
