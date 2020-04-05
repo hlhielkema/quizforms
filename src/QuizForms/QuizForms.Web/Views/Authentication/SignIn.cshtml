@@ -6,18 +6,17 @@
 
 <h1>Inloggen voor beheerders</h1>
 
-<form asp-controller="Authentication" asp-action="SignIn" method="post">
-    <label for="Username">Gebruikersnaam</label>
-    <input asp-for="Username" />
-    <span asp-validation-for="Username"></span>
-
-
-    <label for="Password">Wachtwoord</label>
-    <input asp-for="Password" />
-    <span asp-validation-for="Password"></span>
-    <br><br>
-
+<form asp-controller="Authentication" asp-action="SignIn" method="post" class="basic-form">
+    <div class="form-element">
+        <label for="Username">Gebruikersnaam</label>
+        <input asp-for="Username" />
+        <span asp-validation-for="Username"></span>
+    </div>
+    <div class="form-element">
+        <label for="Password">Wachtwoord</label>
+        <input asp-for="Password" />
+        <span asp-validation-for="Password"></span>
+    </div>
     <input asp-for="Redirect" />
-
     <input type="submit" value="Inloggen" formmethod="post">
 </form>

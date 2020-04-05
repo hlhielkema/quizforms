@@ -5,13 +5,16 @@
 }
 
 <h1>Account aanmaken</h1>
-<form asp-controller="Account" asp-action="Create" method="post">
-    <label for="Username">Gebruikersnaam</label>
-    <input asp-for="Username" />
-    <span asp-validation-for="Username"></span>
-    <label for="Message">Wachtwoord</label>
-    <input asp-for="Password" />
-    <span asp-validation-for="Password"></span>
-    <br><br>
+<form asp-controller="Account" asp-action="Create" method="post" class="basic-form">
+    <div class="form-element">
+        <label for="Username">Gebruikersnaam</label>
+        <input asp-for="Username" />
+        <span asp-validation-for="Username"></span>
+    </div>
+    <div class="form-element">
+        <label for="Message">Wachtwoord</label>
+        <input asp-for="Password" />
+        <span asp-validation-for="Password"></span>
+    </div>    
     <input type="submit" value="Aanmaken" formmethod="post">
 </form>

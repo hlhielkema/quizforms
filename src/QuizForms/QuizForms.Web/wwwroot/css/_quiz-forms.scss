@@ -1,4 +1,4 @@
-﻿form.basic-form {
+﻿form.list-form {
     float: left;
     width: 100%;
     margin-bottom: 128px;
@@ -106,7 +106,7 @@ form.quiz-form {
 }
 
 
-form > .submit {
+form.list-form > .submit {
     float: left;
     background: #ff8906;
     color: #fffffe;
@@ -135,7 +135,7 @@ form > .submit {
 }
 
 @media only screen and (max-width: 600px) {
-    form > .submit {
+    form.list-form > .submit {
         margin-left: 16px;
         margin-top: 56px;
         width: calc(100% - 32px);

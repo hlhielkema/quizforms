@@ -3,20 +3,18 @@
 @{
     ViewData["Title"] = "Contact";
 }
-
 <h1>Contact formulier</h1>
+<form asp-controller="Contact" asp-action="Index" method="post" class="basic-form">
+    <div class="form-element">
+        <label for="EmailAddress">Emailadres</label>
+        <input asp-for="EmailAddress" />
+        <span asp-validation-for="EmailAddress"></span>
 
-<form asp-controller="Contact" asp-action="Index" method="post">
-    <label for="EmailAddress">Emailadres</label>
-    <input asp-for="EmailAddress" />
-    <span asp-validation-for="EmailAddress"></span>
-
-
-    <label for="Message">Bericht</label>
-    <input asp-for="Message" />
-    <span asp-validation-for="Message"></span>
-    <br><br>
-
-
+    </div>
+    <div class="form-element">
+        <label for="Message">Bericht</label>
+        <input asp-for="Message" />
+        <span asp-validation-for="Message"></span>
+    </div>
     <input type="submit" value="Verzenden" formmethod="post">
 </form>

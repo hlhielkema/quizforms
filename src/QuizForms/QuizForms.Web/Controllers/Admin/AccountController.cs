@@ -54,13 +54,21 @@ namespace QuizForms.Web.Controllers.Admin
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(CreateAccountModel model)
         {
-            if (await _accountRepository.CreateAccount(model.Username, model.Password))
+            if (ModelState.IsValid)
             {
-                return RedirectToAction("Index");
-            }            
+                if (await _accountRepository.CreateAccount(model.Username, model.Password))
+                {
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    ModelState.AddModelError(nameof(CreateAccountModel.Username), "De gebruikersnaam is al in gebruik.");
+                    return View(model);
+                }
+            }
             else
-            {                
-                ModelState.AddModelError(nameof(CreateAccountModel.Username), "De gebruikersnaam is al in gebruik.");
+            {
+                // Invalid model state
                 return View(model);
             }
         }

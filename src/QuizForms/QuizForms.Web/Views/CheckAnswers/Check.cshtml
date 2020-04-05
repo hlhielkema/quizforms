@@ -17,7 +17,7 @@
     </tr>
 </table>
 
-<form asp-controller="CheckAnswers" asp-action="Check" method="post" class="basic-form" data-redirect-after-submit="/admin/check-answers/@Model.Form">
+<form asp-controller="CheckAnswers" asp-action="Check" method="post" class="list-form" data-redirect-after-submit="/admin/check-answers/@Model.Form">
     @foreach (ExtendedAnswer answer in Model.Answers)
     {
         <h2>@answer.QuestionTitle</h2>

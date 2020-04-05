@@ -173,12 +173,12 @@ ul li a span {
 ul li a:hover span {
   margin-left: 10px; }
 
-form.basic-form {
+form.list-form {
   float: left;
   width: 100%;
   margin-bottom: 128px; }
   @media only screen and (max-width: 600px) {
-    form.basic-form {
+    form.list-form {
       margin: 0 -16px;
       margin-bottom: 132px;
       width: calc(100% + 32px); } }
@@ -253,7 +253,7 @@ form.quiz-form > .question.question-text input {
   form.quiz-form > .question.question-text input {
     max-width: 100%; } }
 
-form > .submit {
+form.list-form > .submit {
   float: left;
   background: #ff8906;
   color: #fffffe;
@@ -264,18 +264,18 @@ form > .submit {
   border-radius: 4px;
   font-size: 15px;
   cursor: pointer; }
-  form > .submit:hover {
+  form.list-form > .submit:hover {
     background: #d8770b; }
-  form > .submit.working {
+  form.list-form > .submit.working {
     background: #424242;
     cursor: not-allowed; }
-  form > .submit.done {
+  form.list-form > .submit.done {
     background: #4CAF50;
     opacity: 0.4;
     cursor: not-allowed; }
 
 @media only screen and (max-width: 600px) {
-  form > .submit {
+  form.list-form > .submit {
     margin-left: 16px;
     margin-top: 56px;
     width: calc(100% - 32px);
@@ -343,3 +343,54 @@ table {
           font-weight: 600;
           background: red;
           border-color: red; }
+
+form.basic-form {
+  float: left;
+  width: 100%;
+  margin-top: 16px; }
+  form.basic-form label {
+    float: left;
+    width: 100%;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 2px; }
+  form.basic-form .form-element {
+    float: left;
+    width: 100%;
+    margin-bottom: 16px; }
+  form.basic-form input[type="text"], form.basic-form input[type="password"], form.basic-form input[type="email"] {
+    float: left;
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+    background: none;
+    border: 0;
+    border-bottom: solid 1px #656565;
+    padding: 8px 0;
+    outline: 0;
+    border-radius: 0;
+    color: #fff; }
+    form.basic-form input[type="text"]:focus, form.basic-form input[type="password"]:focus, form.basic-form input[type="email"]:focus {
+      border-color: #ff8906; }
+  form.basic-form input[type="submit"] {
+    float: left;
+    background: #ff8906;
+    color: #fffffe;
+    padding: 8px 12px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    border: 0;
+    outline: 0; }
+    form.basic-form input[type="submit"]:hover {
+      background: #d8770b; }
+  form.basic-form input.input-validation-error {
+    border-color: red; }
+  form.basic-form span.field-validation-error {
+    float: left;
+    width: 100%;
+    font-weight: 600;
+    color: #f00;
+    margin-top: 7px;
+    font-size: 12px; }

@@ -1,0 +1,67 @@
+﻿form.basic-form {
+    float: left;
+    width: 100%;
+    margin-top: 16px;
+
+    label {
+        float: left;
+        width: 100%;
+        font-size: 12px;
+        font-weight: 600;
+        margin-bottom: 2px;
+    }
+
+    .form-element {
+        float: left;
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    input[type="text"], input[type="password"], input[type="email"] {
+        float: left;
+        width: 100%;
+        max-width: 500px;
+        box-sizing: border-box;
+        background: none;
+        border: 0;
+        border-bottom: solid 1px #656565;
+        padding: 8px 0;
+        outline: 0;
+        border-radius: 0;
+        color: #fff;
+
+        &:focus {
+            border-color: #ff8906;
+        }
+    }
+
+    input[type="submit"] {
+        float: left;
+        background: #ff8906;
+        color: #fffffe;
+        padding: 8px 12px;
+        box-sizing: border-box;
+        border-radius: 4px;
+        font-size: 14px;
+        cursor: pointer;
+        border: 0;
+        outline: 0;
+
+        &:hover {
+            background: #d8770b;
+        }
+    }
+
+    input.input-validation-error {
+        border-color: red;
+    }
+
+    span.field-validation-error {
+        float: left;
+        width: 100%;
+        font-weight: 600;
+        color: #f00;
+        margin-top: 7px;
+        font-size: 12px;
+    }
+}
