@@ -282,20 +282,10 @@ form > .submit {
     text-align: center;
     margin-bottom: 64px; } }
 
-.stream-header {
-  float: left;
-  width: 100%;
-  background: #18181B;
-  height: 28px;
-  text-align: center;
-  line-height: 28px;
-  font-size: 12px;
-  border-bottom: solid 2px #2c2b38; }
-
 .twitch-embed-container {
   float: left;
   width: 100%;
-  height: calc(100% - 78px); }
+  height: calc(100% - 50px); }
 
 table {
   width: 100%;
