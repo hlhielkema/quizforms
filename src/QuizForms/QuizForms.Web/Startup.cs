@@ -31,7 +31,7 @@ namespace QuizForms.Web
             services.AddSingleton<IQuizFormAnswersRepository, QuizFormAnswersRepository>();
             services.AddSingleton<IQuizFormsRepository, QuizFormsRepository>();
             services.AddSingleton<IQuizFormsScoresRepostiory, QuizFormsScoresRepostiory>();
-            services.AddSingleton<IScoreboardRepository, ScoreboardRepository>();                       
+            services.AddSingleton<IScoreboardRepository, ScoreboardRepository>();            
 
             //
             services.Configure<QuizFormsSettings>(Configuration.GetSection("Settings"));

@@ -1,0 +1,23 @@
+﻿@using QuizForms.Data.Models.Scoreboard;
+@model List<ScoreboardInfo>
+@{
+    ViewData["Title"] = "Scoreborden";
+}
+
+<h1>Scoreborden</h1>
+
+<ul>
+    @foreach (ScoreboardInfo scoreboard in Model)
+    {
+        <li>
+            <a href="/admin/scoreboard/edit/@scoreboard.Id">@scoreboard.Title <span>➡️</span></a>
+        </li>
+    }
+</ul>
+
+<h2>Overig</h2>
+<ul>
+    <li>
+        <a href="/admin/scoreboard/create">Scorebord aanmaken <span>➡️</span></a>
+    </li>
+</ul>

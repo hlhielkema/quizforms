@@ -1,0 +1,15 @@
+﻿@using QuizForms.Web.Models.ManageScoreboard;
+@model CreateScoreboardModel;
+@{
+    ViewData["Title"] = "Scorebord aanmaken";
+}
+
+    <h1>Scorebord aanmaken</h1>
+<form asp-controller="ManageScoreboard" asp-action="Create" method="post" class="basic-form">
+    <div class="form-element">
+        <label for="Username">Titel</label>
+        <input asp-for="Title" />
+        <span asp-validation-for="Title"></span>
+    </div>    
+    <input type="submit" value="Aanmaken" formmethod="post">
+</form>

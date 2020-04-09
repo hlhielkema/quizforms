@@ -93,7 +93,7 @@ namespace QuizForms.Data.Repositories.Implementations
         /// </summary>
         /// <param name="messageId"></param>
         /// <returns>contact message</returns>
-        public ContactMessage GetById(Guid messageId)
+        public ContactMessage Get(Guid messageId)
         {
             // Construct the filename of the (existing) contact message file
             string filename = Path.Combine(ContactPath, string.Format("{0}.json", messageId));

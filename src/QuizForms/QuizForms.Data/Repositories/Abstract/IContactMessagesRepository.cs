@@ -33,7 +33,7 @@ namespace QuizForms.Data.Repositories.Abstract
         /// </summary>
         /// <param name="messageId"></param>
         /// <returns>contact message</returns>
-        ContactMessage GetById(Guid messageId);
+        ContactMessage Get(Guid messageId);
 
         /// <summary>
         /// Archive a message
