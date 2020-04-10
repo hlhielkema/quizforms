@@ -9,7 +9,7 @@
 
 
 
-<h2>Scoreboard</h2>
+<h2>Scorebord</h2>
 <table>
     <tr>
         <th>Team</th>
@@ -48,11 +48,14 @@
 <h2>Overig</h2>
 <ul>
     <li>
-        <a href="/admin/scoreboard/view/@Model.Scoreboard.Id">Scoreboard Weergeven <span>➡️</span></a>
+        <a href="/admin/scoreboard/view/@Model.Scoreboard.Id">Scorebord Weergeven <span>➡️</span></a>        
+    </li>
+    <li>
+        <a href="/admin/scoreboard/delete/@Model.Scoreboard.Id">Scorebord Verwijderen <span>➡️</span></a>
     </li>
 </ul>
 
-<h2>Importeren uit</h2>
+<h2>Importeren uit...</h2>
 <ul>
     @foreach (FormInfo form in Model.Forms)
     {

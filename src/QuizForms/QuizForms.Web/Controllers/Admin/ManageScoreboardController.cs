@@ -92,6 +92,17 @@ namespace QuizForms.Web.Controllers.Admin
         }
 
         [HttpGet]
+        [Route("delete/{id}")]
+        public IActionResult Delete(Guid id)
+        {
+            // TODO
+            // Post impl with ValidateAntiForgeryToken
+
+            _scoreboardRepository.Delete(id);
+            return RedirectToAction("Overview");
+        }
+
+        [HttpGet]
         [Route("import/{id}/{formId}")]
         public IActionResult ImportScore(Guid id, string formId)
         {
@@ -125,7 +136,7 @@ namespace QuizForms.Web.Controllers.Admin
             }
 
             return View(model);
-        }
+        }        
 
         [HttpPost]
         [Route("import/{id}/{formId}")]
