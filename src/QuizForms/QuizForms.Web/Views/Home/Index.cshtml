@@ -1,14 +1,14 @@
 ﻿@using QuizForms.Web.Models.Home;
 @model HomeViewModel
 @{
-    ViewData["Title"] = "Corona Quiz";
+    ViewData["Title"] = "Corona Pubquiz";
 }
 
-<h1>Corona Quiz</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<h1>Corona Pubquiz</h1>
+<p>Welkom bij de Corona Pubquiz! Tijdens de pubquiz is er een <a href="/livestream/twitch" target="_blank">livestream</a> waar we de vragen stellen. Dit doen we in losse rondes met elk een eigen thema. Op deze website kan je de antwoordenformulier vinden. Wij kijken de antwoorden voor je na voor de eindscores. Deelnemen kost niks. Wil je toch een bijdrage leveren? Doneer dan bijvoorbeeld aan het Rode Kruis. We hopen dat iedereen een leuke avond gaat beleven! <strong>We gaan 11 April om 20:00 beginnen.</strong></p>
 
 <h2>Antwoordformulieren</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+<p>De onderstaande antwoordenformulieren worden beschikbaar als de ronde gaat beginnen. Je moet de pagina wel even verversen voor de nieuwe status zichtbaar is. Één formulier per team is genoeg. Je kan de formulieren invullen vanaf je telefoon, tablet of computer.</p>
 <ul>
     @foreach (FormInfo form in Model.VisibleForms)
     {
@@ -28,7 +28,7 @@
 <h2>Links</h2>
 <ul>
     <li>
-        <a href="/livestream/twitch" target="_blank">Live stream <span>➡️</span></a>
+        <a href="/livestream/twitch" target="_blank">Livestream <span>➡️</span></a>
     </li>
     <li>
         <a href="/contact">Contact <span>➡️</span></a>
@@ -36,7 +36,7 @@
     @*<li>
         <a href="/about">Over ons <span>➡️</span></a>
     </li>*@
-    <li>
+    @*<li>
         <a href="/admin">Administrator paneel <span>➡️</span></a>
-    </li>
+    </li>*@
 </ul>

@@ -3,7 +3,7 @@
   "order": 1,
   "title": "Ronde 1: Kennis vragen",
   "description": "Test je algemene kennis met deze 10 vragen",
-  "available": true,
+  "available": false,
   "hidden": false,
   "Questions": [
     {

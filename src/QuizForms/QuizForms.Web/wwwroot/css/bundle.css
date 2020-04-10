@@ -127,6 +127,11 @@ h2 {
 p {
   line-height: 28px;
   font-size: 16px; }
+  p a {
+    color: #ff8906;
+    text-decoration: underline; }
+  p strong {
+    font-weight: 600; }
 
 ul {
   margin-top: 16px;

@@ -3,7 +3,7 @@
   "order": 2,
   "title": "Ronde 2: Test",
   "description": "Test je algemene kennis met deze 10 vragen",
-  "available": true,
+  "available": false,
   "hidden": false,
   "Questions": [
     {
