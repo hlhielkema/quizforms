@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace QuizForms.Data.Models.Scoreboard
 {
@@ -9,6 +10,6 @@ namespace QuizForms.Data.Models.Scoreboard
         public string Team { get; set; }
 
         [JsonProperty("scores")]
-        public Dictionary<string, int> Scores { get; set; }
+        public Dictionary<string, int> Scores { get; set; }       
     }
 }

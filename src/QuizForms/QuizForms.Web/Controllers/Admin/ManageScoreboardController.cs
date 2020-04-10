@@ -156,7 +156,6 @@ namespace QuizForms.Web.Controllers.Admin
                     keys.Add(mapping.Key);
                     values.Add(mapping.Value);
                 }
-
                 
                 // Get the scoreboard
                 Scoreboard scoreboard = _scoreboardRepository.Get(id);
@@ -204,6 +203,10 @@ namespace QuizForms.Web.Controllers.Admin
 
                 // Update the scoreboard
                 _scoreboardRepository.Update(scoreboard);
+
+                // Sort score from high to low
+                scoreboard.Rows = scoreboard.Rows.OrderByDescending(x => x.Scores.Sum(x => x.Value))
+                                                 .ToList();
 
                 // Everything OK, redirect
                 return Ok();
