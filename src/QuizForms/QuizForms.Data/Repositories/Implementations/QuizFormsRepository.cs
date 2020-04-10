@@ -6,7 +6,7 @@ using QuizForms.Data.Repositories.Abstract;
 using System;
 using System.Collections.Generic;
 using System.IO;
-
+using System.Linq;
 
 namespace QuizForms.Data.Repositories.Implementations
 {
@@ -29,6 +29,7 @@ namespace QuizForms.Data.Repositories.Implementations
         public List<FormInfo> GetAllVisible()
         {
             List<FormInfo> results = new List<FormInfo>();
+
             foreach (string filename in Directory.GetFiles(FormsPath))
             {
                 string contents = File.ReadAllText(filename);
@@ -36,6 +37,9 @@ namespace QuizForms.Data.Repositories.Implementations
                 if (!form.Hidden)
                     results.Add(form);
             }
+
+            results = results.OrderBy(x => x.Order).ToList();
+
             return results;
         }
 
@@ -48,6 +52,9 @@ namespace QuizForms.Data.Repositories.Implementations
                 FormInfo form = JsonConvert.DeserializeObject<FormInfo>(contents);
                 results.Add(form);
             }
+
+            results = results.OrderBy(x => x.Order).ToList();
+
             return results;
         }
 

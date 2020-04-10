@@ -7,6 +7,9 @@ namespace QuizForms.Data.Models.Forms
         [JsonProperty("id")]
         public string Id { get; set; }
 
+        [JsonProperty("order")]
+        public int Order { get; set; }
+
         [JsonProperty("title")]
         public string Title { get; set; }
 
