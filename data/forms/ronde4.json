@@ -1,6 +1,6 @@
 {
   "id": "ronde_4",
-  "title": "Ronde 2: Test",
+  "title": "Ronde 4: Test",
   "description": "Test je algemene kennis met deze 10 vragen",
   "available": false,
   "hidden": false,
@@ -67,7 +67,8 @@
     {
       "type": "text",
       "title": "Antwoord vraag 6",
-      "points": 2
+      "points": 2,
+      "correct": null
     }
   ]
 }

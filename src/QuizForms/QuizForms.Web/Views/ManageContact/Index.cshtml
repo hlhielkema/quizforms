@@ -1,7 +1,19 @@
-﻿
+﻿@using QuizForms.Data.Models.Contact;
+@model List<ContactMessage>;
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Contact berichten";
 }
 
-<h1>Contact beheren</h1>
+<h1>Contact berichten</h1>
 
+@foreach(ContactMessage message in Model)
+{
+    <div class="message" data-id="@message.Id">
+        <h2>
+            @message.EmailAddress - (@message.DateCreated)
+        </h2>
+        <p>
+            @message.Message
+        </p>
+    </div>
+}
