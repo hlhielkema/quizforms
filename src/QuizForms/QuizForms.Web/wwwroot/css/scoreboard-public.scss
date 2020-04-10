@@ -1,0 +1,23 @@
+﻿body {
+    background: #fff;
+    color: #000;
+
+    h1 {
+        color: #000;
+    }
+
+    table {
+        color: #000;
+    }
+
+    tr {
+        td, th {
+            border-bottom: solid 2px #d0d0d0;
+            padding: 16px 6px;
+        }
+    }
+
+    .container {
+        width: 1200px;
+    }
+}

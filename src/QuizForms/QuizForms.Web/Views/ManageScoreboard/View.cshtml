@@ -1,0 +1,47 @@
+﻿@using QuizForms.Data.Models.Scoreboard;
+@model Scoreboard
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+<h1>@Model.Title</h1>
+
+<table>
+    <tr>
+        <th>Team</th>
+        @foreach (ScoreboardRound round in Model.Rounds)
+        {
+            <th>@round.Title</th>
+        }
+        <th>Totaal</th>
+    </tr>
+    @foreach (ScoreboardTeam row in Model.Rows)
+    {
+        <tr>
+            <td>
+                @row.Team
+            </td>
+            @{
+                int total = 0;
+            }
+            @foreach (ScoreboardRound round in Model.Rounds)
+            {
+                string value = "-";
+                if (row.Scores.ContainsKey(round.Id))
+                {
+                    int score = row.Scores[round.Id];
+                    total += score;
+                    value = score.ToString();
+
+                }
+                <td>@value</td>
+            }
+            <td>@total</td>
+        </tr>
+    }
+</table>
+
+@section Styles
+{
+    <link rel="stylesheet" href="~/css/scoreboard-public.min.css" />
+}

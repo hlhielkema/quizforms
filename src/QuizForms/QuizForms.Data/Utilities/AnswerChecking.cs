@@ -71,7 +71,7 @@ namespace QuizForms.Data.Utilities
                 }
             }
 
-            if (given.ToLower().Trim() == question.Correct.ToLower().Trim())
+            if (given.ToLower().Trim() == question.Correct?.ToLower().Trim())
             {
                 // Correct                    
                 return question.Points;

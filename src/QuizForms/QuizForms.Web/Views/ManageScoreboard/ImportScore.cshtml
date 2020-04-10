@@ -1,0 +1,60 @@
+﻿@using QuizForms.Web.Models.ManageScoreboard
+@model ImportRoundModel
+@{
+    ViewData["Title"] = "ImportScore";
+}
+
+@if (!Model.AllChecked)
+{
+    <h1 style="color: red;">Waarschuwing: niet alle ingevulde formulieren hebben een score.</h1>
+}
+
+<h1>Scores importeren</h1>
+
+<h2>Scorebord: @Model.Scoreboard.Title</h2>
+<h2>Formulier: @Model.RoundId</h2>
+
+<form asp-controller="ManageScoreboard" asp-action="Import" method="post" class="list-form" data-redirect-after-submit="/admin/scoreboard/edit/@Model.Scoreboard.Id">
+    <table>
+        <tr>
+            <th>Antwoorden ID</th>
+            <th>Team</th>
+            <th>Score</th>
+            <th>Importeren als...</th>
+        </tr>
+        @foreach (ImportTeamModel team in Model.Scores)
+        {
+            bool exists = Model.ExistingTeams.Contains(team.Team);
+
+            <tr class="import-score-row" data-id="@team.AnswersId">
+                <td>@team.AnswersId</td>
+                <td>@team.Team</td>
+                <td>@team.Score</td>
+                <td>
+                    <select>
+                        @if (exists)
+                        {
+                            <option value="@team.Team">@team.Team</option>
+                        }
+                        else
+                        {
+                            <option value="@team.Team">--- IMPORT AS NEW ---</option>
+
+                        }
+                        <option value="">--- SKIP ---</option>
+                        @foreach (string optie in Model.ExistingTeams)
+                        {
+                            <option value="@optie">@optie</option>
+                        }
+                    </select>
+                </td>
+            </tr>
+        }
+    </table>
+    <div class="submit">Score importeren</div>
+</form>
+
+@section Scripts
+{
+    <script src="~/js/import-score.js"></script>
+}

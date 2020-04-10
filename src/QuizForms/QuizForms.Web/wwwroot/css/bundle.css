@@ -343,6 +343,19 @@ table {
           font-weight: 600;
           background: red;
           border-color: red; }
+  table select {
+    float: left;
+    width: 100%;
+    border: solid 2px #2c2b38;
+    background: none;
+    color: #fff;
+    outline: 0;
+    padding: 4px 8px;
+    box-sizing: border-box;
+    margin: -6px 0; }
+    table select option {
+      background: #000;
+      color: #fff; }
 
 form.basic-form {
   float: left;

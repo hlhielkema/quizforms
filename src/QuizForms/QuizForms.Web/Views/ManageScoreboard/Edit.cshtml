@@ -1,36 +1,63 @@
 ﻿@using QuizForms.Data.Models.Scoreboard;
-@model Scoreboard
+@using QuizForms.Web.Models.ManageScoreboard;
+@model EditScoreboardModel
 @{
-    ViewData["Title"] = Model.Title;
+    ViewData["Title"] = Model.Scoreboard.Title;
 }
 
-<h1>@Model.Title</h1>
+<h1>@Model.Scoreboard.Title</h1>
 
+
+
+<h2>Scoreboard</h2>
 <table>
     <tr>
-        @foreach (ScoreboardRound round in Model.Rounds)
+        <th>Team</th>
+        @foreach (ScoreboardRound round in Model.Scoreboard.Rounds)
         {
             <th>@round.Title</th>
         }
         <th>Totaal</th>
     </tr>
-    @foreach (ScoreboardTeam row in Model.Rows)
+    @foreach (ScoreboardTeam row in Model.Scoreboard.Rows)
     {
-        <tr>
-            @{
-                int total = 0;
-            }
-            @foreach (ScoreboardRound round in Model.Rounds)
+    <tr>
+        <td>
+            @row.Team
+        </td>
+        @{
+            int total = 0;
+        }
+        @foreach (ScoreboardRound round in Model.Scoreboard.Rounds)
+        {
+            string value = "-";
+            if (row.Scores.ContainsKey(round.Id))
             {
-                string value = "-";
-                if (row.Scores.ContainsKey(round.Id))
-                {
-                    int score = row.Scores[round.Id];
-                    total += score;
-                    value = score.ToString();
-                }
-                <td>@total</td>
+                int score = row.Scores[round.Id];
+                total += score;
+                value = score.ToString();
+
             }
-        </tr>        
+            <td>@value</td>
+        }
+        <td>@total</td>
+    </tr>
     }
 </table>
+
+<h2>Overig</h2>
+<ul>
+    <li>
+        <a href="/admin/scoreboard/view/@Model.Scoreboard.Id">Scoreboard Weergeven <span>➡️</span></a>
+    </li>
+</ul>
+
+<h2>Importeren uit</h2>
+<ul>
+    @foreach (FormInfo form in Model.Forms)
+    {
+        <li>
+            <a href="/admin/scoreboard/import/@Model.Scoreboard.Id/@form.Id">@form.Title<span>➡️</span></a>
+        </li>
+    }
+</ul>
