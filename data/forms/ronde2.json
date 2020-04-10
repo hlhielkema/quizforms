@@ -2,7 +2,7 @@
   "id": "ronde_2",
   "title": "Ronde 2: Test",
   "description": "Test je algemene kennis met deze 10 vragen",
-  "available": false,
+  "available": true,
   "hidden": false,
   "Questions": [
     {

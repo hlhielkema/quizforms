@@ -22,9 +22,15 @@
             <td>@(set.Points?.ToString() ?? "-")</td>
             <td>
                 <a class="action" href="/admin/check-answers/@Model.FormId/view/@set.Id">(Bekijken)</a>
-                <a class="action" href="/admin/check-answers/@Model.FormId/check/@set.Id">(Controleren)</a>                
+                <a class="action" href="/admin/check-answers/@Model.FormId/check/@set.Id">(Controleren)</a>
             </td>
         </tr>
     }
 </table>
 
+<h2>Overig</h2>
+<ul>
+    <li>
+        <a href="/admin/check-answers/@Model.FormId/autocheck">Automatisch controleren <span>➡️</span></a>
+    </li>
+</ul>

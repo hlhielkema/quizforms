@@ -44,9 +44,7 @@ namespace QuizForms.Web.Controllers.Admin
         [HttpGet]
         [Route("{formId}")]
         public IActionResult Index(string formId)
-        {
-            
-
+        {           
             AnswerSetsViewModel model = new AnswerSetsViewModel()
             {
                 FormId = formId,
@@ -59,6 +57,39 @@ namespace QuizForms.Web.Controllers.Admin
             };
             
             return View(model);
+        }
+
+        [HttpGet]
+        [Route("{formId}/autocheck")]
+        public IActionResult AutoCheck(string formId)
+        {
+            // Try to get the quiz form
+            Form form = _formsRepository.GetById(formId);
+            if (form == null)
+                return NotFound();
+
+            // Loop through the answer sets
+            foreach (FormAnswersSet answerSet in _answersRepository.GetAll(formId))
+            {                
+                // Get the stored scores
+                Dictionary<string, int> scores = _scoresRepository.GetScore(formId, answerSet.Id);
+
+                // Combine the data into a extended form answers model
+                ExtendedFormAnswersSet model = AnswerChecking.ConstructExtendedFormAnswersSet(answerSet, form, scores);
+
+                // Save the score if no manual checking is required
+                if (model.ManualCheckingRequiredCount == 0)
+                {
+                    // Extract the scores
+                    scores = model.Answers.ToDictionary(x => x.QuestionId, x => x.AssignedPoints.Value);
+
+                    // Update the score
+                    _scoresRepository.UpdateScore(formId, answerSet.Id, scores);
+                }
+            }
+
+            // Redirect to the overview
+            return RedirectToAction("Index", new { formId });
         }
 
         [HttpGet]
