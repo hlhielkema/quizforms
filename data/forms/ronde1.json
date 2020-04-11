@@ -2,57 +2,105 @@
   "id": "ronde_1",
   "order": 1,
   "title": "Ronde 1: Raad de film",
-  "description": "Raad voor welke film het plaatje is.",
+  "description": "Raad uit welke film het plaatje komt",
   "available": false,
   "hidden": false,
   "Questions": [
     {
       "type": "text",
-      "title": "Antwoord vraag 1: Naam van de film",
-      "points": 2,
-      "correct": "TODO"
+      "title": "Antwoord vraag 1: Welke film zie je hier?",
+      "points": 1,
+      "correct": "Finding Nemo"
     },
     {
       "type": "text",
-      "title": "Antwoord vraag 2: Naam van de film",
-      "points": 2,
-      "correct": "TODO"
+      "title": "Antwoord vraag 1: Door welke studio is de film gemaakt?",
+      "points": 1,
+      "correct": "Pixar"
     },
     {
       "type": "text",
-      "title": "Antwoord vraag 3: Naam van de film",
-      "points": 2,
-      "correct": "TODO"
+      "title": "Antwoord vraag 2: Welke film zie je hier?",
+      "points": 1,
+      "correct": "Pulp Fiction"
     },
     {
       "type": "text",
-      "title": "Antwoord vraag 4: Naam van de film",
-      "points": 2,
-      "correct": "TODO"
+      "title": "Antwoord vraag 2: Wie is de regisseur van de film?",
+      "points": 1,
+      "correct": "Quentin Tarantino"
     },
     {
       "type": "text",
-      "title": "Antwoord vraag 5: Naam van de film",
-      "points": 2,
-      "correct": "TODO"
+      "title": "Antwoord vraag 3: Welke film zie je hier?",
+      "points": 1,
+      "correct": "Jaws"
     },
     {
       "type": "text",
-      "title": "Antwoord vraag 6: Naam van de film",
-      "points": 2,
-      "correct": "TODO"
+      "title": "Antwoord vraag 3: Hoeveel oscars won de film?",
+      "points": 1,
+      "correct": "3"
     },
     {
       "type": "text",
-      "title": "Antwoord vraag 7: Naam van de film",
-      "points": 2,
-      "correct": "TODO"
+      "title": "Antwoord vraag 4: Welke film zie je hier?",
+      "points": 1,
+      "correct": "The Joker"
     },
     {
       "type": "text",
-      "title": "Antwoord vraag 8: Naam van de film",
-      "points": 2,
-      "correct": "TODO"
+      "title": "Antwoord vraag 4: In welke (fictieve) stad speelt de film zich af?",
+      "points": 1,
+      "correct": "Gotham"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 5: Wie is de hoofdrolspeelster van de film?",
+      "points": 1,
+      "correct": "Maleficent"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 5: Artiest(en) van het nummer",
+      "points": 1,
+      "correct": "Angelina Jolie"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 6: Welke film zie je hier?",
+      "points": 1,
+      "correct": "Saw"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 6: Hoe heet het karakter  in de film die alle “puzzels” bedenkt?",
+      "points": 1,
+      "correct": "Jigsaw"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 7: Welke film zie je hier?",
+      "points": 1,
+      "correct": "Silence of the lamb"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 7: Wat is de naam van de psychopaat uit de film met een rare eetgewoonte?",
+      "points": 1,
+      "correct": "Hannibal lecter"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 8: Welke film zie je hier?",
+      "points": 1,
+      "correct": "Baby"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 8: Wie is de regisseur van de film?",
+      "points": 1,
+      "correct": "Steven Spielberg"
     }
   ]
 }
