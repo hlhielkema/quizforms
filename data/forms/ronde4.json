@@ -7,69 +7,100 @@
   "hidden": false,
   "Questions": [
     {
-      "type": "multiple-choice",
-      "options": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "title": "Antwoord vraag 1",
-      "points": 2,
-      "correct": "A"
-    },
-    {
-      "type": "multiple-choice",
-      "options": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "title": "Antwoord vraag 2",
-      "points": 2,
-      "correct": "C"
-    },
-    {
-      "type": "multiple-choice",
-      "options": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "title": "Antwoord vraag 3",
-      "points": 2,
-      "correct": "A"
-    },
-    {
-      "type": "multiple-choice",
-      "options": [
-        "A",
-        "B",
-        "C"
-      ],
-      "title": "Antwoord vraag 4",
-      "points": 2,
-      "correct": "B"
-    },
-    {
-      "type": "multiple-choice",
-      "options": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "title": "Antwoord vraag 5",
-      "points": 2,
-      "correct": "B"
+      "type": "text",
+      "title": "Antwoord vraag 1: Naam van het nummer",
+      "points": 1,
+      "correct": "TODO"
     },
     {
       "type": "text",
-      "title": "Antwoord vraag 6",
-      "points": 2,
-      "correct": null
+      "title": "Antwoord vraag 1: Artiest(en) van het nummer",
+      "points": 1,
+      "correct": "TODO"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 2: Naam van het nummer",
+      "points": 1,
+      "correct": "TODO"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 2: Artiest(en) van het nummer",
+      "points": 1,
+      "correct": "TODO"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 3: Naam van het nummer",
+      "points": 1,
+      "correct": "TODO"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 3: Artiest(en) van het nummer",
+      "points": 1,
+      "correct": "TODO"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 4: Naam van het nummer",
+      "points": 1,
+      "correct": "TODO"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 4: Artiest(en) van het nummer",
+      "points": 1,
+      "correct": "TODO"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 5: Naam van het nummer",
+      "points": 1,
+      "correct": "TODO"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 5: Artiest(en) van het nummer",
+      "points": 1,
+      "correct": "TODO"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 6: Naam van het nummer",
+      "points": 1,
+      "correct": "TODO"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 6: Artiest(en) van het nummer",
+      "points": 1,
+      "correct": "TODO"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 7: Naam van het nummer",
+      "points": 1,
+      "correct": "TODO"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 7: Artiest(en) van het nummer",
+      "points": 1,
+      "correct": "TODO"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 8: Naam van het nummer",
+      "points": 1,
+      "correct": "TODO"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 8: Artiest(en) van het nummer",
+      "points": 1,
+      "correct": "TODO"
     }
   ]
 }
