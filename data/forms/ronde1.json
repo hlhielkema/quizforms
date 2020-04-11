@@ -1,75 +1,46 @@
 {
   "id": "ronde_1",
   "order": 1,
-  "title": "Ronde 1: Kennis vragen",
-  "description": "Test je algemene kennis met deze 10 vragen",
+  "title": "Ronde 1: Raad de film",
+  "description": "Raad voor welke film het plaatje is.",
   "available": false,
   "hidden": false,
   "Questions": [
     {
-      "type": "multiple-choice",
-      "options": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
+      "type": "text",
       "title": "Antwoord vraag 1",
       "points": 2,
-      "correct": "A"
+      "correct": "antwoord hier"
     },
     {
-      "type": "multiple-choice",
-      "options": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
+      "type": "text",
       "title": "Antwoord vraag 2",
       "points": 2,
-      "correct": "C"
+      "correct": "antwoord hier"
     },
     {
-      "type": "multiple-choice",
-      "options": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
+      "type": "text",
       "title": "Antwoord vraag 3",
       "points": 2,
-      "correct": "A"
+      "correct": "antwoord hier"
     },
     {
-      "type": "multiple-choice",
-      "options": [
-        "A",
-        "B",
-        "C"
-      ],
+      "type": "text",
       "title": "Antwoord vraag 4",
       "points": 2,
-      "correct": "B"
+      "correct": "antwoord hier"
     },
     {
-      "type": "multiple-choice",
-      "options": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
+      "type": "text",
       "title": "Antwoord vraag 5",
       "points": 2,
-      "correct": "B"
+      "correct": "antwoord hier"
     },
     {
       "type": "text",
       "title": "Antwoord vraag 6",
       "points": 2,
-      "correct": "Banaan"
+      "correct": "antwoord hier"
     },
     {
       "type": "text",
@@ -80,18 +51,6 @@
     {
       "type": "text",
       "title": "Antwoord vraag 8",
-      "points": 2,
-      "correct": "antwoord hier"
-    },
-    {
-      "type": "text",
-      "title": "Antwoord vraag 9",
-      "points": 2,
-      "correct": "Broodje kip"
-    },
-    {
-      "type": "text",
-      "title": "Antwoord vraag 10",
       "points": 2,
       "correct": "antwoord hier"
     }

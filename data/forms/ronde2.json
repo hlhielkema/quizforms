@@ -1,75 +1,106 @@
 {
   "id": "ronde_2",
   "order": 2,
-  "title": "Ronde 2: Test",
-  "description": "Test je algemene kennis met deze 10 vragen",
+  "title": "Ronde 2: Raad de plaat",
+  "description": "",
   "available": false,
   "hidden": false,
   "Questions": [
     {
-      "type": "multiple-choice",
-      "options": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "title": "Antwoord vraag 1",
-      "points": 2,
-      "correct": "A"
-    },
-    {
-      "type": "multiple-choice",
-      "options": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "title": "Antwoord vraag 2",
-      "points": 2,
-      "correct": "C"
-    },
-    {
-      "type": "multiple-choice",
-      "options": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "title": "Antwoord vraag 3",
-      "points": 2,
-      "correct": "A"
-    },
-    {
-      "type": "multiple-choice",
-      "options": [
-        "A",
-        "B",
-        "C"
-      ],
-      "title": "Antwoord vraag 4",
-      "points": 2,
-      "correct": "B"
-    },
-    {
-      "type": "multiple-choice",
-      "options": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "title": "Antwoord vraag 5",
-      "points": 2,
-      "correct": "B"
+      "type": "text",
+      "title": "Antwoord vraag 1: Naam van het nummer",
+      "points": 1,
+      "correct": "Big Yellow Taxi"
     },
     {
       "type": "text",
-      "title": "Antwoord vraag 6",
-      "points": 2,
-      "correct": null
+      "title": "Antwoord vraag 1: Artiest(en) van het nummer",
+      "points": 1,
+      "correct": "Counting crows ft vanessa carlton"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 2: Naam van het nummer",
+      "points": 1,
+      "correct": "Cheerleader (Felix Jaehn Remix)"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 2: Artiest(en) van het nummer",
+      "points": 1,
+      "correct": "OMI"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 3: Naam van het nummer",
+      "points": 1,
+      "correct": "ANDERHALF (PROD. MB & UNLEADED)"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 3: Artiest(en) van het nummer",
+      "points": 1,
+      "correct": "ALI B FEAT. POKE & JUDESKA"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 4: Naam van het nummer",
+      "points": 1,
+      "correct": "Crazy"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 4: Artiest(en) van het nummer",
+      "points": 1,
+      "correct": "Gnarls Barkley"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 5: Naam van het nummer",
+      "points": 1,
+      "correct": "Riptide"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 5: Artiest(en) van het nummer",
+      "points": 1,
+      "correct": "Vance Joy"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 6: Naam van het nummer",
+      "points": 1,
+      "correct": "Rhythm of the Night"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 6: Artiest(en) van het nummer",
+      "points": 1,
+      "correct": "Corona"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 7: Naam van het nummer",
+      "points": 1,
+      "correct": "(I Just) Died In Your Arms"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 7: Artiest(en) van het nummer",
+      "points": 1,
+      "correct": "Cutting Crew"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 8: Naam van het nummer",
+      "points": 1,
+      "correct": "Losing My Religion"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 8: Artiest(en) van het nummer",
+      "points": 1,
+      "correct": "R.E.M."
     }
   ]
 }

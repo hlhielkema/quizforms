@@ -1,8 +1,8 @@
 {
   "id": "ronde_6",
   "order": 6,
-  "title": "Ronde 6: Test",
-  "description": "Test je algemene kennis met deze 10 vragen",
+  "title": "Ronde 6: Wie of wat is...",
+  "description": "",
   "available": false,
   "hidden": false,
   "Questions": [
@@ -28,7 +28,7 @@
       ],
       "title": "Antwoord vraag 2",
       "points": 2,
-      "correct": "C"
+      "correct": "D"
     },
     {
       "type": "multiple-choice",
@@ -51,7 +51,7 @@
       ],
       "title": "Antwoord vraag 4",
       "points": 2,
-      "correct": "B"
+      "correct": "C"
     },
     {
       "type": "multiple-choice",
@@ -63,13 +63,43 @@
       ],
       "title": "Antwoord vraag 5",
       "points": 2,
-      "correct": "B"
+      "correct": "D"
     },
     {
-      "type": "text",
+      "type": "multiple-choice",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
       "title": "Antwoord vraag 6",
       "points": 2,
-      "correct": null
+      "correct": "A"
+    },
+    {
+      "type": "multiple-choice",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "title": "Antwoord vraag 7",
+      "points": 2,
+      "correct": "C"
+    },
+    {
+      "type": "multiple-choice",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "title": "Antwoord vraag 8",
+      "points": 2,
+      "correct": "A"
     }
   ]
 }

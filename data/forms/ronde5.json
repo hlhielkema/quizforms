@@ -1,75 +1,130 @@
 {
   "id": "ronde_5",
   "order": 5,
-  "title": "Ronde 5: Test",
-  "description": "Test je algemene kennis met deze 10 vragen",
+  "title": "Ronde 5: Google Translate",
+  "description": "Raad de naam en artiest van het vertaalde liedje.",
   "available": false,
   "hidden": false,
   "Questions": [
     {
-      "type": "multiple-choice",
-      "options": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "title": "Antwoord vraag 1",
-      "points": 2,
-      "correct": "A"
-    },
-    {
-      "type": "multiple-choice",
-      "options": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "title": "Antwoord vraag 2",
-      "points": 2,
-      "correct": "C"
-    },
-    {
-      "type": "multiple-choice",
-      "options": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "title": "Antwoord vraag 3",
-      "points": 2,
-      "correct": "A"
-    },
-    {
-      "type": "multiple-choice",
-      "options": [
-        "A",
-        "B",
-        "C"
-      ],
-      "title": "Antwoord vraag 4",
-      "points": 2,
-      "correct": "B"
-    },
-    {
-      "type": "multiple-choice",
-      "options": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "title": "Antwoord vraag 5",
-      "points": 2,
-      "correct": "B"
+      "type": "text",
+      "title": "Antwoord vraag 1: Naam van het nummer",
+      "points": 1,
+      "correct": "Paint It, Black"
     },
     {
       "type": "text",
-      "title": "Antwoord vraag 6",
-      "points": 2,
-      "correct": null
+      "title": "Antwoord vraag 1: Artiest(en) van het nummer",
+      "points": 1,
+      "correct": "The Rolling Stones"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 2: Naam van het nummer",
+      "points": 1,
+      "correct": "Zoutelande"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 2: Artiest(en) van het nummer",
+      "points": 1,
+      "correct": "Blof"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 3: Naam van het nummer",
+      "points": 1,
+      "correct": "Hotel California"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 3: Artiest(en) van het nummer",
+      "points": 1,
+      "correct": "Eagles"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 4: Naam van het nummer",
+      "points": 1,
+      "correct": "Het regent Zonnestralen"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 4: Artiest(en) van het nummer",
+      "points": 1,
+      "correct": "Acda en de Munnik"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 5: Naam van het nummer",
+      "points": 1,
+      "correct": "Drank & Drugs"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 5: Artiest(en) van het nummer",
+      "points": 1,
+      "correct": "Lil Kleine & Ronnie Flex"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 6: Naam van het nummer",
+      "points": 1,
+      "correct": "Wannabe"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 6: Artiest(en) van het nummer",
+      "points": 1,
+      "correct": "Spice Girls"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 7: Naam van het nummer",
+      "points": 1,
+      "correct": "Heroes"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 7: Artiest(en) van het nummer",
+      "points": 1,
+      "correct": "David Bowie"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 8: Naam van het nummer",
+      "points": 1,
+      "correct": "Someone Like You"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 8: Artiest(en) van het nummer",
+      "points": 1,
+      "correct": "Adele"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 9: Naam van het nummer",
+      "points": 1,
+      "correct": "Oceaan"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 9: Artiest(en) van het nummer",
+      "points": 1,
+      "correct": "Racoon"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 10: Naam van het nummer",
+      "points": 1,
+      "correct": "Reunie"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 10: Artiest(en) van het nummer",
+      "points": 1,
+      "correct": "Snelle"
     }
   ]
 }
