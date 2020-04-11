@@ -32,75 +32,75 @@
     },
     {
       "type": "text",
-      "title": "Antwoord vraag 3: Naam van het nummer",
+      "title": "Antwoord vraag 3: Uit welke televisieserie komt dit nummer?",
       "points": 1,
-      "correct": "TODO"
+      "correct": "Klokhuis"
     },
     {
       "type": "text",
-      "title": "Antwoord vraag 3: Artiest(en) van het nummer",
+      "title": "Antwoord vraag 3: Welk stuk fruit zat er in de intro",
       "points": 1,
-      "correct": "TODO"
+      "correct": "Appel"
     },
     {
       "type": "text",
       "title": "Antwoord vraag 4: Naam van het nummer",
       "points": 1,
-      "correct": "TODO"
+      "correct": "Freedom"
     },
     {
       "type": "text",
       "title": "Antwoord vraag 4: Artiest(en) van het nummer",
       "points": 1,
-      "correct": "TODO"
+      "correct": "Pharrell Williams"
     },
     {
       "type": "text",
       "title": "Antwoord vraag 5: Naam van het nummer",
       "points": 1,
-      "correct": "TODO"
+      "correct": "Fear the reaper"
     },
     {
       "type": "text",
       "title": "Antwoord vraag 5: Artiest(en) van het nummer",
       "points": 1,
-      "correct": "TODO"
+      "correct": "Blue Oyster Cult"
     },
     {
       "type": "text",
       "title": "Antwoord vraag 6: Naam van het nummer",
       "points": 1,
-      "correct": "TODO"
+      "correct": "Blof"
     },
     {
       "type": "text",
       "title": "Antwoord vraag 6: Artiest(en) van het nummer",
       "points": 1,
-      "correct": "TODO"
+      "correct": "Holiday in Spain"
     },
     {
       "type": "text",
       "title": "Antwoord vraag 7: Naam van het nummer",
       "points": 1,
-      "correct": "TODO"
+      "correct": "Dance Monkey"
     },
     {
       "type": "text",
       "title": "Antwoord vraag 7: Artiest(en) van het nummer",
       "points": 1,
-      "correct": "TODO"
+      "correct": "Tones & I"
     },
     {
       "type": "text",
       "title": "Antwoord vraag 8: Naam van het nummer",
       "points": 1,
-      "correct": "TODO"
+      "correct": "Baby"
     },
     {
       "type": "text",
       "title": "Antwoord vraag 8: Artiest(en) van het nummer",
       "points": 1,
-      "correct": "TODO"
+      "correct": "Justin Bieber"
     }
   ]
 }
