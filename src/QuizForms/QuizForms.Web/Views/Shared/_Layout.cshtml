@@ -11,9 +11,18 @@
 </head>
 <body>
     <header>
-        <a href="/">
-            <img src="~/img/logo.svg" />
-        </a>
+        @if (User.Identity.IsAuthenticated)
+        {
+            <a href="/admin">
+                <img src="~/img/logo.svg" />
+            </a>
+        }
+        else
+        {
+            <a href="/">
+                <img src="~/img/logo.svg" />
+            </a>
+        }
     </header>
 
     @if (ViewData.ContainsKey("RemoveContainer") && ViewData["RemoveContainer"] is bool bRemove && bRemove)

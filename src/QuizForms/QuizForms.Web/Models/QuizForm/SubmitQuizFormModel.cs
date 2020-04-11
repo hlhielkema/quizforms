@@ -16,6 +16,12 @@ namespace QuizForms.Web.Models.QuizForm
 
             foreach (KeyValuePair<string, string> answer in Answers)
             {
+                if (answer.Key.Length > 500 || answer.Value.Length > 500)
+                {
+                    error = "Answer too long";
+                    return false;
+                }
+
                 if (answers.ContainsKey(answer.Key))
                 {
                     error = "Duplicate answer";
@@ -28,7 +34,7 @@ namespace QuizForms.Web.Models.QuizForm
                     answers.Add(answer.Key, answer.Value);
             }
 
-            if (string.IsNullOrWhiteSpace(teamname))
+            if (string.IsNullOrWhiteSpace(teamname) || teamname.Length > 50)
             {
                 error = "Invalid teamname";
                 return false;

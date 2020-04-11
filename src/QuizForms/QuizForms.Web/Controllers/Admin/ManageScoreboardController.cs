@@ -201,13 +201,13 @@ namespace QuizForms.Web.Controllers.Admin
                 // Remove the rows with no scores
                 scoreboard.Rows.RemoveAll(x => x.Scores == null || x.Scores.Count == 0);
 
-                // Update the scoreboard
-                _scoreboardRepository.Update(scoreboard);
-
                 // Sort score from high to low
                 scoreboard.Rows = scoreboard.Rows.OrderByDescending(x => x.Scores.Sum(x => x.Value))
                                                  .ToList();
 
+                // Update the scoreboard
+                _scoreboardRepository.Update(scoreboard);
+           
                 // Everything OK, redirect
                 return Ok();
             }

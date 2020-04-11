@@ -36,7 +36,10 @@
     @*<li>
         <a href="/about">Over ons <span>➡️</span></a>
     </li>*@
-    @*<li>
-        <a href="/admin">Administrator paneel <span>➡️</span></a>
-    </li>*@
+    @if (User.Identity.IsAuthenticated)
+    {
+        <li>
+            <a href="/admin">Administrator paneel <span>➡️</span></a>
+        </li>
+    }
 </ul>

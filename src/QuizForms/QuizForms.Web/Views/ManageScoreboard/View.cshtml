@@ -2,22 +2,34 @@
 @model Scoreboard
 @{
     ViewData["Title"] = Model.Title;
+    int rank = 1;
 }
 
 <h1>@Model.Title</h1>
 
 <table>
     <tr>
+        <th>Rang</th>
         <th>Team</th>
         @foreach (ScoreboardRound round in Model.Rounds)
         {
-            <th>@round.Title</th>
+            @if (round.Title.Length > 15)
+            {
+                <th>@(round.Title.Substring(0, 12) + "...")</th>
+            }
+            else
+            {
+                <th>@round.Title</th>
+            }
         }
         <th>Totaal</th>
     </tr>
     @foreach (ScoreboardTeam row in Model.Rows)
     {
         <tr>
+            <td>
+                @(rank++)
+            </td>
             <td>
                 @row.Team
             </td>
