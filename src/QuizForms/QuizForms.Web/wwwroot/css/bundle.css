@@ -48,6 +48,11 @@ body, html {
   color: #a7a9be;
   font-family: 'Roboto', sans-serif; }
 
+html.full-height {
+  height: 100%; }
+  html.full-height body {
+    height: 100%; }
+
 .row {
   float: left;
   width: 100%; }
@@ -76,6 +81,11 @@ body, html {
   background: #0f0e17;
   color: #a7a9be;
   font-family: 'Roboto', sans-serif; }
+
+html.full-height {
+  height: 100%; }
+  html.full-height body {
+    height: 100%; }
 
 .row {
   float: left;

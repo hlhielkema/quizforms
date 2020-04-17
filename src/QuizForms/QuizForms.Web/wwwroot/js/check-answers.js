@@ -24,7 +24,6 @@
     }
 })();
 
-
 // Form submit logic
 (function () {
     // Get the submit button element     

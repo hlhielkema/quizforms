@@ -1,5 +1,15 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿@{
+    bool fullHeight = ViewData.ContainsKey("FullHeight") && ViewData["FullHeight"] is bool b && b;
+    string htmlClass = null;
+
+    if (fullHeight)
+    {
+        htmlClass = "full-height";
+    }
+}
+
+<!DOCTYPE html>
+<html lang="nl" class="@htmlClass">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -9,6 +19,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     @RenderSection("Styles", required: false)
 </head>
+
 <body>
     <header>
         @if (User.Identity.IsAuthenticated)
@@ -37,7 +48,7 @@
     }
 
     @RenderSection("OuterBody", required: false)
-    
+
     @RenderSection("Scripts", required: false)
 </body>
 </html>
