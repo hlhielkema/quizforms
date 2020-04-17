@@ -25,9 +25,7 @@
 
     // Reload the page in the background
     function reloadInBackground() {
-        getRequest('/', function (status, xhr) {
-            console.log(status, xhr);
-
+        getRequest('/', function (status, xhr) {      
             // Update the content of the page
             document.open();
             document.write(xhr.response);
