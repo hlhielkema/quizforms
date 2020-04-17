@@ -18,13 +18,18 @@ namespace QuizForms.Data.Repositories.Implementations
     /// </summary>
     public sealed class QuizFormsRepository : QuizFormsBaseRepository, IQuizFormsRepository
     {
+        // Private fields
+        private DateTime _lastChangedUtc;
+
         /// <summary>
         /// Constructor
         /// </summary>
         /// <param name="settings">quiz forms settings</param>
         public QuizFormsRepository(IOptions<QuizFormsSettings> settings) 
             : base(settings)
-        { }
+        {
+            OnChange();
+        }        
 
         public List<FormInfo> GetAllVisible()
         {
@@ -56,6 +61,15 @@ namespace QuizForms.Data.Repositories.Implementations
             results = results.OrderBy(x => x.Order).ToList();
 
             return results;
+        }
+
+        /// <summary>
+        /// Get the last time the forms collection changed(UTC).
+        /// </summary>
+        /// <returns>UTC datetime</returns>
+        public DateTime GetLastChanged()
+        {
+            return _lastChangedUtc;
         }
 
         public Form GetById(string id)
@@ -122,6 +136,9 @@ namespace QuizForms.Data.Repositories.Implementations
                     json = JsonConvert.SerializeObject(form, Formatting.Indented);
                     File.WriteAllText(filename, json);
 
+                    // Signal that the collection changed
+                    OnChange();
+
                     return;
                 }
             }
@@ -151,11 +168,19 @@ namespace QuizForms.Data.Repositories.Implementations
                     json = JsonConvert.SerializeObject(form, Formatting.Indented);
                     File.WriteAllText(filename, json);
 
+                    // Signal that the collection changed
+                    OnChange();
+
                     return;
                 }
             }
 
             throw new Exception("Form not found");
+        }
+
+        private void OnChange()
+        {
+            _lastChangedUtc = DateTime.UtcNow;
         }
     }
 }

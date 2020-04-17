@@ -1,4 +1,5 @@
 ﻿using QuizForms.Data.Models.Forms;
+using System;
 using System.Collections.Generic;
 
 namespace QuizForms.Data.Repositories.Abstract
@@ -35,6 +36,12 @@ namespace QuizForms.Data.Repositories.Abstract
         /// </summary>
         /// <returns>list with forms</returns>
         List<FormInfo> GetAll();
+
+        /// <summary>
+        /// Get the last time the forms collection changed.
+        /// </summary>
+        /// <returns>datetime</returns>
+        DateTime GetLastChanged();
 
         /// <summary>
         /// Get a form by its id.

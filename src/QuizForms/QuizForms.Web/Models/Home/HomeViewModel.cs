@@ -6,5 +6,7 @@ namespace QuizForms.Web.Models.Home
     public class HomeViewModel
     {
         public List<FormInfo> VisibleForms { get; set; }
+
+        public long LastChangedTimestamp { get; set; }
     }
 }

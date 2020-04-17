@@ -9,7 +9,7 @@
 
 <h2>Antwoordformulieren</h2>
 <p>De onderstaande antwoordenformulieren worden beschikbaar als de ronde gaat beginnen. Je moet de pagina wel even verversen voor de nieuwe status zichtbaar is. Één formulier per team is genoeg. Je kan de formulieren invullen vanaf je telefoon, tablet of computer.</p>
-<ul>
+<ul id="quiz-form-list" data-timestamp="@Model.LastChangedTimestamp">
     @foreach (FormInfo form in Model.VisibleForms)
     {
         <li>
@@ -34,8 +34,8 @@
         <a href="/contact">Contact <span>➡️</span></a>
     </li>
     @*<li>
-        <a href="/about">Over ons <span>➡️</span></a>
-    </li>*@
+            <a href="/about">Over ons <span>➡️</span></a>
+        </li>*@
     @if (User.Identity.IsAuthenticated)
     {
         <li>
@@ -43,3 +43,8 @@
         </li>
     }
 </ul>
+
+@section Scripts
+{
+    <script src="~/js/homepage.js"></script>
+}

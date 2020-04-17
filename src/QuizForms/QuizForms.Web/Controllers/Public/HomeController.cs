@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using QuizForms.Data.Repositories.Abstract;
+using QuizForms.Data.Utilities;
 using QuizForms.Web.Models;
 using QuizForms.Web.Models.Home;
 using QuizForms.Web.Models.Shared;
+using System;
 using System.Diagnostics;
 
 namespace QuizForms.Web.Controllers.Public
@@ -23,9 +25,20 @@ namespace QuizForms.Web.Controllers.Public
         {                                    
             return View(new HomeViewModel()
             {
-                VisibleForms = _formsRepository.GetAllVisible()
+                VisibleForms = _formsRepository.GetAllVisible(),
+                LastChangedTimestamp = TimestampConvert.ConvertToTimestamp(_formsRepository.GetLastChanged())
             });
         }
+
+        [Route("/last-changed")]
+        [HttpGet]
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult LastChanged()
+        {
+            long timestamp = TimestampConvert.ConvertToTimestamp(_formsRepository.GetLastChanged());
+            return Ok(timestamp);
+        }
+
 
         //[Route("/about")]
         //[HttpGet]
@@ -38,6 +51,6 @@ namespace QuizForms.Web.Controllers.Public
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+        }      
     }
 }
