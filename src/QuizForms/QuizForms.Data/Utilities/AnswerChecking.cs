@@ -2,6 +2,7 @@
 using QuizForms.Data.Models.Forms;
 using QuizForms.Data.Models.Questions;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace QuizForms.Data.Utilities
 {
@@ -10,6 +11,16 @@ namespace QuizForms.Data.Utilities
     /// </summary>
     public static class AnswerChecking
     {
+        // List with always wrong answers (lowercase)
+        private static string[] ALSWAYS_WRONG_ANSWERS_LIST = new string[]
+        {                        
+            "-",            
+            ".",
+            "pas",
+            "pass",
+            "nope",
+        };
+
         public static ExtendedFormAnswersSet ConstructExtendedFormAnswersSet(FormAnswersSet answerSet, Form form, Dictionary<string, int> scores)
         {
             // Create the model, it will be updated later
@@ -50,7 +61,7 @@ namespace QuizForms.Data.Utilities
 
         public static int? TryCheckAnswer(Question question, string given)
         {
-            if (string.IsNullOrWhiteSpace(given))
+            if (string.IsNullOrWhiteSpace(given) || ALSWAYS_WRONG_ANSWERS_LIST.Contains(given.ToLower()))
             {
                 // The given answer is empty, this means no points
                 return 0;
