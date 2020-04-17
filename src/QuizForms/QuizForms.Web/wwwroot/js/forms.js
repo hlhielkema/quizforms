@@ -48,7 +48,18 @@ window.addEventListener("beforeunload", function (e) {
 (function () {
     // Get the submit button element     
     var submitElement = document.querySelector('form .submit');
-    
+
+    // Try to restore the team name if the local storage is available    
+    if (window.localStorage !== undefined) {        
+        var team = window.localStorage.getItem('team');       
+        if (team !== null) {            
+            var teamInput = document.querySelector('#main input[name="Teamname"]');
+            if (teamInput !== null) {
+                teamInput.value = team;
+            }
+        }
+    }
+
     // Bind 
     submitElement.addEventListener('click', function () {
         // Ignore when active
@@ -66,12 +77,14 @@ window.addEventListener("beforeunload", function (e) {
         var results = [];
         var empty = 0;
         var teamnameSet = false;
+        var team = null;
         for (var i = 0; i < questionElements.length; i++) {
             // Get the input name and value
             var name = questionElements[i].name;
             var value = questionElements[i].value;
 
             if (name === 'Teamname' && value.length > 0) {
+                team = value;
                 teamnameSet = true;
             }
 
@@ -89,6 +102,11 @@ window.addEventListener("beforeunload", function (e) {
         if (!teamnameSet) {
             alert('Vul een teamnaam in om de antwoorden te kunnen verzenden.');
             return;
+        }
+
+        // Put the team name in the local storage if available
+        if (window.localStorage !== undefined) {
+            localStorage.setItem('team', team);
         }
 
         // Ask for confirmation if some answers are still empty
