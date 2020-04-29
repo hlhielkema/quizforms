@@ -26,6 +26,8 @@ h2 {
 }
 
 p {
+    float: left;
+    width: 100%;
     line-height: 28px;
     font-size: 16px;
 
@@ -92,4 +94,13 @@ ul li a span {
 
 ul li a:hover span {
     margin-left: 10px;
+}
+
+.register-button {
+    background: orange;
+    color: #fff;
+    padding: 12px;
+    float: left;
+    border-radius: 2px;
+    margin-top: 16px;
 }
