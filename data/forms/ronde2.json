@@ -32,6 +32,12 @@
     },
     {
       "type": "text",
+      "title": "Antwoord vraag 4: Van welk jaar",
+      "points": 1,
+      "correct": "2014"
+    },
+    {
+      "type": "text",
       "title": "Antwoord vraag 5: Naam van het album",
       "points": 1,
       "correct": "Swan Song"
