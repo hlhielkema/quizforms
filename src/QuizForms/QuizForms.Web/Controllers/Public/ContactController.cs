@@ -15,37 +15,37 @@ namespace QuizForms.Web.Controllers.Public
             _messageRepostitory = messageRepostitory;
         }
 
-        [Route("")]
-        [HttpGet]
-        public IActionResult Index()
-        {
-            return View();
-        }
+        //[Route("")]
+        //[HttpGet]
+        //public IActionResult Index()
+        //{
+        //    return View();
+        //}
 
-        [Route("")]
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Index(ContactFormModel model)
-        {
-            if (ModelState.IsValid)
-            {                  
-                // Create the contact message
-                _messageRepostitory.Create(model.EmailAddress, model.Message);
+        //[Route("")]
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public IActionResult Index(ContactFormModel model)
+        //{
+        //    if (ModelState.IsValid)
+        //    {                  
+        //        // Create the contact message
+        //        _messageRepostitory.Create(model.EmailAddress, model.Message);
 
-                // Return to the "message sent" page
-                return RedirectToAction("Sent");
-            }
-            else
-            {
-                // Invalid model state
-                return View(model);
-            }
-        }
+        //        // Return to the "message sent" page
+        //        return RedirectToAction("Sent");
+        //    }
+        //    else
+        //    {
+        //        // Invalid model state
+        //        return View(model);
+        //    }
+        //}
 
-        [Route("sent")]
-        public IActionResult Sent()
-        {
-            return View();
-        }
+        //[Route("sent")]
+        //public IActionResult Sent()
+        //{
+        //    return View();
+        //}
     }
 }
