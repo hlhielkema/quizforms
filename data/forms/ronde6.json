@@ -1,7 +1,7 @@
 {
   "id": "ronde_6",
   "order": 6,
-  "title": "Ronde 6: Wie of wat is...",
+  "title": "Ronde 6: Schandalen",
   "description": "",
   "available": false,
   "hidden": false,
@@ -47,7 +47,8 @@
       "options": [
         "A",
         "B",
-        "C"
+        "C",
+        "D"
       ],
       "title": "Antwoord vraag 4",
       "points": 2,

@@ -1,106 +1,130 @@
 {
   "id": "ronde_1",
   "order": 1,
-  "title": "Ronde 1: Raad de film",
-  "description": "Raad uit welke film het plaatje komt",
-  "available": false,
+  "title": "Ronde 1: Logo's raden",
+  "description": "Van wie is het logo?",
+  "available": true,
   "hidden": false,
   "Questions": [
     {
       "type": "text",
-      "title": "Antwoord vraag 1: Welke film zie je hier?",
+      "title": "Antwoord vraag 1: van wie is dit logo?",
       "points": 1,
-      "correct": "Finding Nemo"
-    },
+      "correct": "NS"
+    },   
     {
       "type": "text",
-      "title": "Antwoord vraag 1: Door welke studio is de film gemaakt?",
+      "title": "Antwoord vraag 2: van wie is dit logo?",
       "points": 1,
-      "correct": "Pixar"
-    },
+      "correct": "Lacoste"
+    },   
     {
       "type": "text",
-      "title": "Antwoord vraag 2: Welke film zie je hier?",
+      "title": "Antwoord vraag 3: van wie is dit logo?",
       "points": 1,
-      "correct": "Pulp Fiction"
-    },
+      "correct": "Pinterest"
+    },   
     {
       "type": "text",
-      "title": "Antwoord vraag 2: Wie is de regisseur van de film?",
+      "title": "Antwoord vraag 4: van wie is dit logo?",
       "points": 1,
-      "correct": "Quentin Tarantino"
-    },
+      "correct": "Airbnb"
+    },   
     {
       "type": "text",
-      "title": "Antwoord vraag 3: Welke film zie je hier?",
+      "title": "Antwoord vraag 5: van wie is dit logo?",
       "points": 1,
-      "correct": "Jaws"
-    },
+      "correct": "Rolex"
+    },  
     {
       "type": "text",
-      "title": "Antwoord vraag 3: Hoeveel oscars won de film?",
+      "title": "Antwoord vraag 6: van wie is dit logo?",
       "points": 1,
-      "correct": "3"
-    },
+      "correct": "Atari"
+    },   
     {
       "type": "text",
-      "title": "Antwoord vraag 4: Welke film zie je hier?",
+      "title": "Antwoord vraag 7: van wie is dit logo?",
       "points": 1,
-      "correct": "The Joker"
-    },
+      "correct": "BP"
+    },   
     {
       "type": "text",
-      "title": "Antwoord vraag 4: In welke (fictieve) stad speelt de film zich af?",
+      "title": "Antwoord vraag 8: van wie is dit logo?",
       "points": 1,
-      "correct": "Gotham"
-    },
+      "correct": "Unilever"
+    },   
     {
       "type": "text",
-      "title": "Antwoord vraag 5: Wie is de hoofdrolspeelster van de film?",
+      "title": "Antwoord vraag 9: van wie is dit logo?",
       "points": 1,
-      "correct": "Maleficent"
-    },
+      "correct": "Tesla"
+    },   
     {
       "type": "text",
-      "title": "Antwoord vraag 5: Artiest(en) van het nummer",
+      "title": "Antwoord vraag 10: van wie is dit logo?",
       "points": 1,
-      "correct": "Angelina Jolie"
-    },
+      "correct": "Target"
+    },    
     {
       "type": "text",
-      "title": "Antwoord vraag 6: Welke film zie je hier?",
+      "title": "Antwoord vraag 11: van wie is dit logo?",
       "points": 1,
-      "correct": "Saw"
-    },
+      "correct": "Nestle"
+    },   
     {
       "type": "text",
-      "title": "Antwoord vraag 6: Hoe heet het karakter  in de film die alle “puzzels” bedenkt?",
+      "title": "Antwoord vraag 12: van wie is dit logo?",
       "points": 1,
-      "correct": "Jigsaw"
-    },
+      "correct": "Evernote"
+    },   
     {
       "type": "text",
-      "title": "Antwoord vraag 7: Welke film zie je hier?",
+      "title": "Antwoord vraag 13: van wie is dit logo?",
       "points": 1,
-      "correct": "Silence of the lamb"
-    },
+      "correct": "Adobe"
+    },   
     {
       "type": "text",
-      "title": "Antwoord vraag 7: Wat is de naam van de psychopaat uit de film met een rare eetgewoonte?",
+      "title": "Antwoord vraag 14: van wie is dit logo?",
       "points": 1,
-      "correct": "Hannibal lecter"
-    },
+      "correct": "Vine"
+    },   
     {
       "type": "text",
-      "title": "Antwoord vraag 8: Welke film zie je hier?",
+      "title": "Antwoord vraag 15: van wie is dit logo?",
       "points": 1,
-      "correct": "Baby"
-    },
+      "correct": "NBC"
+    },  
     {
       "type": "text",
-      "title": "Antwoord vraag 8: Wie is de regisseur van de film?",
+      "title": "Antwoord vraag 16: van wie is dit logo?",
       "points": 1,
-      "correct": "Steven Spielberg"
+      "correct": "Snapchat"
+    },   
+    {
+      "type": "text",
+      "title": "Antwoord vraag 17: van wie is dit logo?",
+      "points": 1,
+      "correct": "Beats"
+    },   
+    {
+      "type": "text",
+      "title": "Antwoord vraag 18: van wie is dit logo?",
+      "points": 1,
+      "correct": "Starbucks"
+    },   
+    {
+      "type": "text",
+      "title": "Antwoord vraag 19: van wie is dit logo?",
+      "points": 1,
+      "correct": "Toblerone"
+    },   
+    {
+      "type": "text",
+      "title": "Antwoord vraag 20: van wie is dit logo?",
+      "points": 1,
+      "correct": "Paypal"
     }
   ]
 }
