@@ -1,8 +1,8 @@
 {
   "id": "ronde_5",
   "order": 5,
-  "title": "Ronde 5: Google Translate",
-  "description": "Raad de naam en artiest van het vertaalde liedje.",
+  "title": "Ronde 5: Raad het nummer",
+  "description": "Raad de naam en artiest van het nummer.",
   "available": false,
   "hidden": false,
   "Questions": [

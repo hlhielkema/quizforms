@@ -1,11 +1,76 @@
 {
   "id": "ronde_4",
   "order": 4,
-  "title": "Ronde 4: Raad de live plaat",
+  "title": "Ronde 4: Middelbare school vragen",
   "description": "",
   "available": false,
   "hidden": false,
   "Questions": [
-    
+    {
+      "type": "multiple-choice",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "title": "Antwoord vraag 1: Nederlands",
+      "points": 2,
+      "correct": "C"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 2: Wiskunde",
+      "points": 2,
+      "correct": "3"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 3: Aardrijkskunde",
+      "points": 2,
+      "correct": "Lijzijde"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 4: Scheikunde",
+      "points": 2,
+      "correct": "CO² of Koolstofdioxide"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 5: Frans",
+      "points": 2,
+      "correct": "Hoe ver is het hier vandaan?"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 6: Duits",
+      "points": 2,
+      "correct": "Je moet anderhalve meter afstand houden"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 7: Economie",
+      "points": 2,
+      "correct": "Hyperinflatie"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 8: Muziek",
+      "points": 2,
+      "correct": "G sleutel"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 9: Pauze",
+      "points": 2,
+      "correct": "6"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 10: Biologie",
+      "points": 2,
+      "correct": "4"
+    }
   ]
 }
