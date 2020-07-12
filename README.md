@@ -1,6 +1,24 @@
 ![banner](img/banner.svg)
 
 ## Introduction
+QuizForms is a web application to host online pub quizzes. It was created and used during the first months of the COVID-19 crisis. It’s designed to be hosted temporary to save expenses. Using Dockers allows quick automated deployment.
+
+## Features
+Features of QuizForms include:
+
+- Public forms to submit quiz answers
+- Embedded (Twitch) live stream.
+- A automated scoreboard.
+- Semi-automated answer checking.
+- Efficient answer checking.
+- Form availability management.
+- Open or multiple choice questions.
+- Remembers the Team name.
+- Warning before submitting an incomplete form.
+- Full touchscreen support.
+- Responsive GUI for public pages.
+- No database dependency
+- Quick automated deployment 
 
 ## Screenshots
 
@@ -10,15 +28,17 @@
 | ![form2](screenshots/form2.png) | ![manage-forms](screenshots/manage-forms.png) |
 
 ## Tech Stack
+The primary components of the QuizForms Tech Stack are:
+
 - .NET Core 3.1
 - ASP.NET Core
 - Sass (scss)
-- HTML, JavaScript, Css
+- HTML, CSS, JavaScript
 - Docker
 - PowerShell
 
 ## Requirements
-Only `Docker` and `PowerShell` are required to build and run QuizForms.
+Only `Docker` and `PowerShell` are required to build and run QuizForms. Other dependencies are included through the Docker container image.
 
 ## Docker
 QuizForms uses Docker to compile and run.
