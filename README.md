@@ -2,11 +2,9 @@
 
 ## Introduction
 
-<img src="screenshots/homepage.png" style="width: 50%;float: left;">
-<img src="screenshots/form.png" style="width: 50%;float: left;">
-<img src="screenshots/form2.png" style="width: 50%;float: left;">
-
----
+<img src="screenshots/homepage.png" width="400">
+<img src="screenshots/form.png" width="400">
+<img src="screenshots/form2.png" width="400">
 
 ## Requirements
 Only `Docker` and `PowerShell` are required to build and run QuizForms.
