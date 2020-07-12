@@ -2,11 +2,12 @@
 
 ## Introduction
 
-TODO
+![homepage](screenshots/homepage.png)
+![form](screenshots/form.png)
+![form2](screenshots/form2.png)
 
-## Setup
-
-TODO
+## Requirements
+Only `Docker` and `PowerShell` are required to build and run QuizForms.
 
 ## Docker
 
