@@ -2,14 +2,17 @@
 
 ## Introduction
 
-![homepage](screenshots/homepage.png)
-![form](screenshots/form.png)
-![form2](screenshots/form2.png)
+<img src="screenshots/homepage.png" width="200">
+<img src="screenshots/form.png" width="200">
+<img src="screenshots/form2.png" width="200">
 
 ## Requirements
 Only `Docker` and `PowerShell` are required to build and run QuizForms.
 
 ## Docker
+
+<img src="img/docker.jpg" width="200">
+
 
 ### Build and run container
 ```
