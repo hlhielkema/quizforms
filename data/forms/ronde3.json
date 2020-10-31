@@ -5,5 +5,81 @@
   "description": "",
   "available": false,
   "hidden": false,
-  "Questions": []
+  "Questions": [
+    {
+      "type": "multiple-choice",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "title": "Antwoord vraag 1",
+      "points": 2,
+      "correct": "D"
+    },
+    {
+      "type": "multiple-choice",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "title": "Antwoord vraag 2",
+      "points": 2,
+      "correct": "D"
+    },
+    {
+      "type": "multiple-choice",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "title": "Antwoord vraag 3",
+      "points": 2,
+      "correct": "A"
+    },
+      "type": "text",
+      "title": "Antwoord vraag 4: Doel Halloween",
+      "points": 1,
+      "correct": "the Halloween we know today can trace its roots back to the ancient Celtic end-of-harvest festival of Samhain. During Samhain, people would lightbonfires and wear costumes to ward off evil spirits."
+    },
+    {
+      "type": "multiple-choice",
+      "options": [
+        "A",
+        "B"
+      ],
+      "title": "Antwoord vraag 5",
+      "points": 2,
+      "correct": "A"
+    },
+    {
+      "type": "multiple-choice",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "title": "Antwoord vraag 6",
+      "points": 2,
+      "correct": "D"
+    },
+    {
+      "type": "multiple-choice",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "title": "Antwoord vraag 7",
+      "points": 2,
+      "correct": "D"
+    }
+  ]
 }
