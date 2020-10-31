@@ -5,5 +5,108 @@
   "description": "",
   "available": false,
   "hidden": false,
-  "Questions": []
+  "Questions": [
+     {
+      "type": "text",
+      "title": "Antwoord vraag 1: Artiest(en) van het nummer",
+      "points": 1,
+      "correct": "AC/DC"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 1: Naam van het nummer",
+      "points": 1,
+      "correct": "Thunderstruck"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 2: Artiest(en) van het nummer",
+      "points": 1,
+      "correct": "Dr. Dre ft. Snoop Dogg, Kurupt, Nate Dogg"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 2: Naam van het nummer",
+      "points": 1,
+      "correct": "The Next Episode"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 2 (bonus): Artiest(en) van het nummer",
+      "points": 1,
+      "correct": "David McCallum"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 2 (bonus): Naam van het nummer",
+      "points": 1,
+      "correct": "The Edge"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 3: Artiest(en) van het nummer",
+      "points": 1,
+      "correct": "Lil Nas X, Billy Ray Cyrus"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 3: Naam van het nummer",
+      "points": 1,
+      "correct": "Old Town Road"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 3 (bonus): Artiest(en) van het nummer",
+      "points": 1,
+      "correct": "Nine Inch Nails"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 3 (bonus): Naam van het nummer",
+      "points": 1,
+      "correct": "Ghosts IV 34"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 4: Artiest(en) van het nummer",
+      "points": 1,
+      "correct": "The Weeknd"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 4: Naam van het nummer",
+      "points": 1,
+      "correct": "Blinding Lights"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 5: Artiest(en) van het nummer",
+      "points": 1,
+      "correct": "George Baker Selection"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 5: Naam van het nummer",
+      "points": 1,
+      "correct": "Little Green Bag"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 5: Naam van de film",
+      "points": 1,
+      "correct": "Reservoir Dogs"
+    },
+     {
+      "type": "text",
+      "title": "Antwoord vraag 6: Artiest(en) van het nummer",
+      "points": 1,
+      "correct": "Plain White T's"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 6: Naam van het nummer",
+      "points": 1,
+      "correct": "Hey There Delilah"
+    }
+  ]
 }
