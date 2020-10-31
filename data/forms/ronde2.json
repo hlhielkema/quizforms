@@ -1,22 +1,70 @@
 {
   "id": "ronde_2",
   "order": 2,
-  "title": "Ronde 2: Voorbeeld open vragen",
+  "title": "Ronde 2: Landen en topografie ✈️",
   "description": "",
-  "available": false,
+  "available": true,
   "hidden": false,
   "Questions": [
     {
       "type": "text",
-      "title": "Antwoord vraag 1: Naam van de film",
+      "title": "Antwoord vraag 1",
       "points": 2,
-      "correct": "Blade Runner 2049"
+      "correct": "Texel, Vlieland, Terschelling, Ameland, Schiermonnikoog"
     },
     {
       "type": "text",
-      "title": "Antwoord vraag 2: Naam van de film",
+      "title": "Antwoord vraag 2",
       "points": 2,
-      "correct": "Wall-E"
-    }  
+      "correct": "Zelf opzoeken; bijv. Sexbierum, Appelscha, Ijsselmond"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 3",
+      "points": 2,
+      "correct": "Geen, want daar doen ze niet aan"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 4",
+      "points": 2,
+      "correct": "Rottumerplaat (of Simonszand)"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 5",
+      "points": 2,
+      "correct": "12,5 miljoen (+/- 1 miljoen)"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 6",
+      "points": 2,
+      "correct": "Marokko"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 7",
+      "points": 2,
+      "correct": "Kazachstan"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 8",
+      "points": 2,
+      "correct": "Christiano Ronaldo, uit Portugal"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 9",
+      "points": 2,
+      "correct": "Marokko"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord vraag 10",
+      "points": 2,
+      "correct": "Oslo"
+    }
   ]
 }

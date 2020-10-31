@@ -1,0 +1,46 @@
+{
+  "id": "ronde_5",
+  "order": 5,
+  "title": "Ronde 5: Rebus ✨",
+  "description": "",
+  "available": true,
+  "hidden": false,
+  "Questions": [
+    {
+      "type": "text",
+      "title": "Antwoord rebus 1",
+      "points": 2,
+      "correct": "Maximaal"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord rebus 2",
+      "points": 2,
+      "correct": "Corona"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord rebus 3",
+      "points": 2,
+      "correct": "Koelkast"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord rebus 4",
+      "points": 2,
+      "correct": "Zebra"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord rebus 5",
+      "points": 2,
+      "correct": "Wodka"
+    },
+    {
+      "type": "text",
+      "title": "Antwoord rebus 6",
+      "points": 2,
+      "correct": "Park"
+    }
+  ]
+}

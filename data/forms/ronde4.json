@@ -1,7 +1,7 @@
 {
-  "id": "ronde_1",
-  "order": 1,
-  "title": "Ronde 1: Vragen over dieren 🦊",
+  "id": "ronde_4",
+  "order": 4,
+  "title": "Ronde 4: Super snelle ronde 🐰",
   "description": "",
   "available": true,
   "hidden": false,
@@ -10,33 +10,27 @@
       "type": "multiple-choice",
       "options": [
         "A",
-        "B",
-        "C",
-        "D"
+        "B"
       ],
       "title": "Antwoord vraag 1",
       "points": 2,
-      "correct": "D"
+      "correct": "B"
     },
     {
       "type": "multiple-choice",
       "options": [
         "A",
-        "B",
-        "C",
-        "D"
+        "B"
       ],
       "title": "Antwoord vraag 2",
       "points": 2,
-      "correct": "C"
+      "correct": "A"
     },
     {
       "type": "multiple-choice",
       "options": [
         "A",
-        "B",
-        "C",
-        "D"
+        "B"
       ],
       "title": "Antwoord vraag 3",
       "points": 2,
@@ -46,33 +40,27 @@
       "type": "multiple-choice",
       "options": [
         "A",
-        "B",
-        "C",
-        "D"
+        "B"
       ],
       "title": "Antwoord vraag 4",
       "points": 2,
-      "correct": "C"
+      "correct": "A"
     },
     {
       "type": "multiple-choice",
       "options": [
         "A",
-        "B",
-        "C",
-        "D"
+        "B"
       ],
       "title": "Antwoord vraag 5",
       "points": 2,
-      "correct": "C"
+      "correct": "B"
     },
     {
       "type": "multiple-choice",
       "options": [
         "A",
-        "B",
-        "C",
-        "D"
+        "B"
       ],
       "title": "Antwoord vraag 6",
       "points": 2,
@@ -82,21 +70,17 @@
       "type": "multiple-choice",
       "options": [
         "A",
-        "B",
-        "C",
-        "D"
+        "B"
       ],
       "title": "Antwoord vraag 7",
       "points": 2,
-      "correct": "D"
+      "correct": "A"
     },
     {
       "type": "multiple-choice",
       "options": [
         "A",
-        "B",
-        "C",
-        "D"
+        "B"
       ],
       "title": "Antwoord vraag 8",
       "points": 2,
@@ -106,9 +90,7 @@
       "type": "multiple-choice",
       "options": [
         "A",
-        "B",
-        "C",
-        "D"
+        "B"
       ],
       "title": "Antwoord vraag 9",
       "points": 2,
@@ -118,13 +100,11 @@
       "type": "multiple-choice",
       "options": [
         "A",
-        "B",
-        "C",
-        "D"
+        "B"
       ],
       "title": "Antwoord vraag 10",
       "points": 2,
-      "correct": "D"
+      "correct": "A"
     }
   ]
 }
