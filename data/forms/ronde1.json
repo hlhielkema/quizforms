@@ -1,130 +1,130 @@
 {
   "id": "ronde_1",
   "order": 1,
-  "title": "Ronde 1: Logo's raden",
-  "description": "Van wie is het logo?",
-  "available": false,
+  "title": "Ronde 1: Vragen over dieren",
+  "description": "",
+  "available": true,
   "hidden": false,
   "Questions": [
     {
-      "type": "text",
-      "title": "Antwoord vraag 1: van wie is dit logo?",
-      "points": 1,
-      "correct": "NS"
+      "type": "multiple-choice",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "title": "Antwoord vraag 1",
+      "points": 2,
+      "correct": "D"
     },
     {
-      "type": "text",
-      "title": "Antwoord vraag 2: van wie is dit logo?",
-      "points": 1,
-      "correct": "Lacoste"
+      "type": "multiple-choice",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "title": "Antwoord vraag 2",
+      "points": 2,
+      "correct": "C"
     },
     {
-      "type": "text",
-      "title": "Antwoord vraag 3: van wie is dit logo?",
-      "points": 1,
-      "correct": "Pinterest"
+      "type": "multiple-choice",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "title": "Antwoord vraag 3",
+      "points": 2,
+      "correct": "A"
     },
     {
-      "type": "text",
-      "title": "Antwoord vraag 4: van wie is dit logo?",
-      "points": 1,
-      "correct": "Airbnb"
+      "type": "multiple-choice",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "title": "Antwoord vraag 4",
+      "points": 2,
+      "correct": "C"
     },
     {
-      "type": "text",
-      "title": "Antwoord vraag 5: van wie is dit logo?",
-      "points": 1,
-      "correct": "Rolex"
+      "type": "multiple-choice",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "title": "Antwoord vraag 5",
+      "points": 2,
+      "correct": "C"
     },
     {
-      "type": "text",
-      "title": "Antwoord vraag 6: van wie is dit logo?",
-      "points": 1,
-      "correct": "Atari"
+      "type": "multiple-choice",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "title": "Antwoord vraag 6",
+      "points": 2,
+      "correct": "B"
     },
     {
-      "type": "text",
-      "title": "Antwoord vraag 7: van wie is dit logo?",
-      "points": 1,
-      "correct": "BP"
+      "type": "multiple-choice",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "title": "Antwoord vraag 7",
+      "points": 2,
+      "correct": "D"
     },
     {
-      "type": "text",
-      "title": "Antwoord vraag 8: van wie is dit logo?",
-      "points": 1,
-      "correct": "Unilever"
+      "type": "multiple-choice",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "title": "Antwoord vraag 8",
+      "points": 2,
+      "correct": "B"
     },
     {
-      "type": "text",
-      "title": "Antwoord vraag 9: van wie is dit logo?",
-      "points": 1,
-      "correct": "Tesla"
+      "type": "multiple-choice",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "title": "Antwoord vraag 9",
+      "points": 2,
+      "correct": "B"
     },
     {
-      "type": "text",
-      "title": "Antwoord vraag 10: van wie is dit logo?",
-      "points": 1,
-      "correct": "Target"
-    },
-    {
-      "type": "text",
-      "title": "Antwoord vraag 11: van wie is dit logo?",
-      "points": 1,
-      "correct": "Nestle"
-    },
-    {
-      "type": "text",
-      "title": "Antwoord vraag 12: van wie is dit logo?",
-      "points": 1,
-      "correct": "Evernote"
-    },
-    {
-      "type": "text",
-      "title": "Antwoord vraag 13: van wie is dit logo?",
-      "points": 1,
-      "correct": "Adobe"
-    },
-    {
-      "type": "text",
-      "title": "Antwoord vraag 14: van wie is dit logo?",
-      "points": 1,
-      "correct": "Vine"
-    },
-    {
-      "type": "text",
-      "title": "Antwoord vraag 15: van wie is dit logo?",
-      "points": 1,
-      "correct": "NBC"
-    },
-    {
-      "type": "text",
-      "title": "Antwoord vraag 16: van wie is dit logo?",
-      "points": 1,
-      "correct": "Snapchat"
-    },
-    {
-      "type": "text",
-      "title": "Antwoord vraag 17: van wie is dit logo?",
-      "points": 1,
-      "correct": "Beats"
-    },
-    {
-      "type": "text",
-      "title": "Antwoord vraag 18: van wie is dit logo?",
-      "points": 1,
-      "correct": "Starbucks"
-    },
-    {
-      "type": "text",
-      "title": "Antwoord vraag 19: van wie is dit logo?",
-      "points": 1,
-      "correct": "Toblerone"
-    },
-    {
-      "type": "text",
-      "title": "Antwoord vraag 20: van wie is dit logo?",
-      "points": 1,
-      "correct": "Paypal"
+      "type": "multiple-choice",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "title": "Antwoord vraag 10",
+      "points": 2,
+      "correct": "D"
     }
   ]
 }

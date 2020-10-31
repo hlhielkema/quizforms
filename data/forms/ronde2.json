@@ -1,7 +1,7 @@
 {
   "id": "ronde_2",
   "order": 2,
-  "title": "Ronde 2: Raad de cover",
+  "title": "Ronde 2: Voorbeeld open vragen",
   "description": "",
   "available": false,
   "hidden": false,
@@ -17,72 +17,6 @@
       "title": "Antwoord vraag 2: Naam van de film",
       "points": 2,
       "correct": "Wall-E"
-    },
-    {
-      "type": "text",
-      "title": "Antwoord vraag 3: Naam van de film",
-      "points": 2,
-      "correct": "Monsters en co. OF Monsters Inc"
-    },
-    {
-      "type": "text",
-      "title": "Antwoord vraag 4: Naam van het festival",
-      "points": 2,
-      "correct": "Defqon.1"
-    },
-    {
-      "type": "text",
-      "title": "Antwoord vraag 4: Van welk jaar",
-      "points": 1,
-      "correct": "2014"
-    },
-    {
-      "type": "text",
-      "title": "Antwoord vraag 5: Naam van het album",
-      "points": 1,
-      "correct": "Swan Song"
-    },
-    {
-      "type": "text",
-      "title": "Antwoord vraag 5: Naam van de artiest",
-      "points": 1,
-      "correct": "Dua Lipa"
-    },
-    {
-      "type": "text",
-      "title": "Antwoord vraag 6: Naam van het album",
-      "points": 1,
-      "correct": "Highway to hell"
-    },
-    {
-      "type": "text",
-      "title": "Antwoord vraag 6: Naam van de artiest",
-      "points": 1,
-      "correct": "ACDC"
-    },
-    {
-      "type": "text",
-      "title": "Antwoord vraag 7: Naam van het album",
-      "points": 1,
-      "correct": "Live at Wembley Stadium"
-    },
-    {
-      "type": "text",
-      "title": "Antwoord vraag 7: Naam van de artiest",
-      "points": 1,
-      "correct": "Queen"
-    },
-    {
-      "type": "text",
-      "title": "Antwoord vraag 8: Naam van het album",
-      "points": 1,
-      "correct": "Villains"
-    },
-    {
-      "type": "text",
-      "title": "Antwoord vraag 8: Naam van de artiest",
-      "points": 1,
-      "correct": "Queens of the stone age"
-    }
+    }  
   ]
 }
